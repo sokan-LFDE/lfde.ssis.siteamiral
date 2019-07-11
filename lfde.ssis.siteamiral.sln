@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "lfde.ssis.siteamiral", "lfde.ssis.siteamiral\lfde.ssis.siteamiral.dtproj", "{85F6C914-9078-4372-B461-D37FDB62339D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85F6C914-9078-4372-B461-D37FDB62339D}.Development|Default.ActiveCfg = Development
+		{85F6C914-9078-4372-B461-D37FDB62339D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C056CF66-2C9C-4968-BDF0-2C7FF3A61EA4}
+	EndGlobalSection
+EndGlobal
