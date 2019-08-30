@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ECHIQCUBE01.Financiere"
+  DTS:DTSID="{1125897C-2907-41F9-8737-54D629977F62}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::ECHIQCUBE01Financiere_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=ECHIQCUBE01;Initial Catalog=Financiere;Provider=MSOLAP.8;Integrated Security=SSPI;Location=ECHIQCUBE01;Extended Properties=&quot;Format=Tabular;&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

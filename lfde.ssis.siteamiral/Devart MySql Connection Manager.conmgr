@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Devart MySql Connection Manager"
+  DTS:DTSID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}"
+  DTS:CreationName="DevartMySql">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::MySQL_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <MySqlConnectionManager>
+      <ConnectionString>User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=300;Connection Timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES</ConnectionString>
+      <Password
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAACoMRoLI+ufECgAWPHewXJNAAAAAASAAACgAAAAEAAAALV/C2/zVuuUvkXIGLgU1XowAAAAE91Nq+gpJ/6ojHhwB5ZojGzFYw90dU5ZdGUgRHwLHKa5jT4VNeMriCbynOFttgrSFAAAAOGhlpx2dppa02N1RW1CsPjk7cO1</Password>
+    </MySqlConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

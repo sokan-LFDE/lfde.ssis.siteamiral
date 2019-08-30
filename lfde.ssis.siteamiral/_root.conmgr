@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="_root"
+  DTS:DTSID="{353F637F-8097-4690-ADBB-26F866F536C8}"
+  DTS:CreationName="ADO.NET:Devart.Data.MySql.MySqlConnection, Devart.Data.MySql, Version=8.13.1437.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::MySQL_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=300;Connection Timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
