@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/20/2019 2:48:43 PM"
@@ -9,10 +9,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="020-Load data from Vermilion"
+  DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{DDF60685-3E68-4D7E-BEDA-3B62DD48AEB8}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{59D59E20-69BD-409B-AD66-FC6070C0FCF2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -90,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Annual Perf\OLE - DB_StagingAmiralSite STG_PerfAnnu.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -259,8 +259,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Annual Perf\OLE - VRMDB - LFDE_Get_AnnualPerfPerFund.Connections[OleDbConnection]"
-                  connectionManagerID="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQDB.VRMDB]"
+                  connectionManagerID="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:invalid"
+                  connectionManagerRefId="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -510,8 +510,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - PART and FONDS\OLE - DB_StagingAmiralSite STG_PartAndFonds.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -736,8 +736,8 @@ WHERE 1 = 1
               <connections>
                 <connection
                   refId="Package\DFT - PART and FONDS\OLE - VRMDB Part INNER Fonds.Connections[OleDbConnection]"
-                  connectionManagerID="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQDB.VRMDB]"
+                  connectionManagerID="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:invalid"
+                  connectionManagerRefId="{3D3D919F-DDC4-40A1-8B98-6A47C2683B0E}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1334,8 +1334,8 @@ FROM
               <connections>
                 <connection
                   refId="Package\DFT - Translations\OLE - DB_REPORTINGS - T_TRADUCTION_LFDECOM.Connections[OleDbConnection]"
-                  connectionManagerID="{69200829-C7CF-40A3-A899-53340F914FE1}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQVERT.DB_REPORTINGS]"
+                  connectionManagerID="{69200829-C7CF-40A3-A899-53340F914FE1}:invalid"
+                  connectionManagerRefId="{69200829-C7CF-40A3-A899-53340F914FE1}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1550,8 +1550,8 @@ FROM
               <connections>
                 <connection
                   refId="Package\DFT - Translations\OLE - DB_StagingAmiralSite STG_Traductions.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1729,8 +1729,8 @@ WHERE LANGUAGE_NM = 'NL';</property>
               <connections>
                 <connection
                   refId="Package\DFT - Translations\OLE - VRSDB - TBL_TRANSLATIONS.Connections[OleDbConnection]"
-                  connectionManagerID="{F4B3DDCC-F223-4C4B-A8C1-5EBDD4707FCA}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQDB.VRSDB]"
+                  connectionManagerID="{F4B3DDCC-F223-4C4B-A8C1-5EBDD4707FCA}:invalid"
+                  connectionManagerRefId="{F4B3DDCC-F223-4C4B-A8C1-5EBDD4707FCA}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2431,7 +2431,7 @@ WHERE LANGUAGE_NM = 'NL';</property>
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="8">
+  Version="sql12">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">

@@ -184,7 +184,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=3000;connection timeout=3000;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;Password=Thib3011</SSIS:Property>
+        SSIS:Name="Value">User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=300;connection timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;Password=Thib3011</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

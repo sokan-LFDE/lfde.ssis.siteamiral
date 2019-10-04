@@ -12,7 +12,7 @@
   DTS:ObjectName="010-Load Indicateur de Risque"
   DTS:PackageType="5"
   DTS:VersionBuild="45"
-  DTS:VersionGUID="{73C4B335-0B1C-472D-A712-677B66E0E74C}">
+  DTS:VersionGUID="{5A8EBBCF-C7C0-4A69-AD15-7009A1DEB2DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>

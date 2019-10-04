@@ -12,7 +12,7 @@
   DTS:ObjectName="030-Load data from DWH_BI"
   DTS:PackageType="5"
   DTS:VersionBuild="36"
-  DTS:VersionGUID="{5EAE28F0-1253-4385-BAF9-398AAEBBC5EB}">
+  DTS:VersionGUID="{A26F171A-7EE5-4C29-9CEB-500D88205433}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />

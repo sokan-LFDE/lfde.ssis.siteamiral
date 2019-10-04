@@ -11,7 +11,7 @@
       DTS:ConnectionString="User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=300;connection timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAADY3dmrhh/zeowYTTXfClKXAAAAAASAAACgAAAAEAAAAI7Q/7iDTsgTnZULU/Pnd6l4AAAA+ZphbGszupQIntocvfLdiJxGKBbJbGY09GDFxFUvkrt6laxENvTY9hFnzaRyv3Obzez3qO9u67C3PHajdWovF/IjQtMKZADgmYymO3NLwqUb7Jy3968RHQXYQwAe+mkGyif9+WQNeGZRJ+vyYbSEuPm0/d15GVwNFAAAAH3L1EVu1XYKGBrQnfsQZTXjRIOW</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAADQixPKpHNSh7c4UYQObzcJAAAAAASAAACgAAAAEAAAAGkAVgMucQblvv/vYUfpy7l4AAAAkdSg92y9LaHlODdiREy3m/d3B47bni0hAOoQ+i6JuELqKNWaCU+Yt9x27mA4Ag9yZsqC33awKfyJhQc8ui5uQWt65mfLswoteBTQ9vVsUhIJ8R1mHhHGGe63vJYQ/DJtBFYPxrWDxVnmAMPCYutBRu47Ewf6L2eJFAAAACQ72RvcJOwipmRRfo+4uRITs/wZ</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

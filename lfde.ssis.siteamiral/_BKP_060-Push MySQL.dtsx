@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="060-Push MySQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="162"
-  DTS:VersionGUID="{305D3F6A-F360-4915-A1B3-2CF7DA509D1A}">
+  DTS:VersionBuild="165"
+  DTS:VersionGUID="{C991C480-3C1D-493B-925F-57C8794EACAE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -12272,10 +12272,10 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT - T_MANAGER\DMD - T_MANAGER"
+              refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER"
               componentClassID="Microsoft.ManagedComponentHost"
               description="Loads or modifies data into an object of the MySql database."
-              name="DMD - T_MANAGER"
+              name="DMD - Push T_MANAGER"
               usesDispositions="true">
               <properties>
                 <property
@@ -12318,7 +12318,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Connections[Devart MySql]"
+                  refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Connections[Devart MySql]"
                   connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
                   description="Devart MySql Connection Manager"
@@ -12326,76 +12326,76 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input]"
+                  refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input]"
                   errorOrTruncationOperation="Insert operation"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].Columns[ManagerLastName]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].Columns[ManagerLastName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ManagerLastName"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerLastName]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerLastName]"
                       lineageId="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager.Outputs[Sortie de source OLE DB].Columns[ManagerLastName]" />
                     <inputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].Columns[ManagerFirstName]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].Columns[ManagerFirstName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ManagerFirstName"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerFirstName]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerFirstName]"
                       lineageId="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager.Outputs[Sortie de source OLE DB].Columns[ManagerFirstName]" />
                     <inputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].Columns[ManagerPicture]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].Columns[ManagerPicture]"
                       cachedDataType="i4"
                       cachedName="ManagerPicture"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerPicture]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerPicture]"
                       lineageId="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager.Outputs[Sortie de source OLE DB].Columns[ManagerPicture]" />
                     <inputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].Columns[ManagerFunction]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].Columns[ManagerFunction]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="16"
                       cachedName="ManagerFunction"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerFunction]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerFunction]"
                       lineageId="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager.Outputs[Sortie de source OLE DB].Columns[ManagerFunction]" />
                     <inputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].Columns[id_Part]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].Columns[id_Part]"
                       cachedDataType="i4"
                       cachedName="id_Part"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[FK_Part]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[FK_Part]"
                       lineageId="Package\DFT - T_MANAGER\DML - Get FK_Part.Outputs[Lookup Match Output].Columns[id_Part]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[Id_Manager]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[Id_Manager]"
                       dataType="i4"
                       name="Id_Manager" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[FK_Part]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[FK_Part]"
                       dataType="i4"
                       name="FK_Part" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerLastName]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerLastName]"
                       dataType="wstr"
                       length="100"
                       name="ManagerLastName" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerFirstName]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerFirstName]"
                       dataType="wstr"
                       length="100"
                       name="ManagerFirstName" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerPicture]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerPicture]"
                       dataType="wstr"
                       length="200"
                       name="ManagerPicture" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input].ExternalColumns[ManagerFunction]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input].ExternalColumns[ManagerFunction]"
                       dataType="wstr"
                       length="50"
                       name="ManagerFunction" />
@@ -12404,50 +12404,50 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output]"
+                  refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Error Output"
-                  synchronousInputId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorDescription]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorDescription]"
                       dataType="wstr"
                       length="1024"
-                      lineageId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Error Output].Columns[ErrorDescription]"
+                      lineageId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Error Output].Columns[ErrorDescription]"
                       name="ErrorDescription" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Output]"
+                  refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Output]"
                   exclusionGroup="1"
                   name="Output"
-                  synchronousInputId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Output].Columns[Id_Manager]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Output].Columns[Id_Manager]"
                       dataType="i4"
-                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Output].ExternalColumns[Id_Manager]"
-                      lineageId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Output].Columns[Id_Manager]"
+                      externalMetadataColumnId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Output].ExternalColumns[Id_Manager]"
+                      lineageId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Output].Columns[Id_Manager]"
                       name="Id_Manager" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Outputs[Output].ExternalColumns[Id_Manager]"
+                      refId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Outputs[Output].ExternalColumns[Id_Manager]"
                       dataType="i4"
                       name="Id_Manager" />
                   </externalMetadataColumns>
@@ -12831,7 +12831,7 @@
           <paths>
             <path
               refId="Package\DFT - T_MANAGER.Paths[Lookup Match Output]"
-              endId="Package\DFT - T_MANAGER\DMD - T_MANAGER.Inputs[input]"
+              endId="Package\DFT - T_MANAGER\DMD - Push T_MANAGER.Inputs[input]"
               name="Lookup Match Output"
               startId="Package\DFT - T_MANAGER\DML - Get FK_Part.Outputs[Lookup Match Output]" />
             <path
@@ -12932,10 +12932,10 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT - T_PERFAN\DMD - T_PERFAN"
+              refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN"
               componentClassID="Microsoft.ManagedComponentHost"
               description="Loads or modifies data into an object of the MySql database."
-              name="DMD - T_PERFAN"
+              name="DMD - Push T_PERFAN"
               usesDispositions="true">
               <properties>
                 <property
@@ -12978,7 +12978,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Connections[Devart MySql]"
+                  refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Connections[Devart MySql]"
                   connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
                   description="Devart MySql Connection Manager"
@@ -12986,74 +12986,74 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input]"
+                  refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input]"
                   errorOrTruncationOperation="Insert operation"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].Columns[Valeur_Fonds]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].Columns[CodeTrad_PerfAnnual]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="CodeTrad_PerfAnnual"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[CodeTrad_PerfAnnual]"
+                      lineageId="Package\DFT - T_PERFAN\DC - Add CodeTradPerfAnnual.Outputs[Sortie de colonne dérivée].Columns[CodeTrad_PerfAnnual]" />
+                    <inputColumn
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].Columns[Valeur_Fonds]"
                       cachedDataType="numeric"
                       cachedName="Valeur_Fonds"
                       cachedPrecision="38"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[PerfFund]"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[PerfFund]"
                       lineageId="Package\DFT - T_PERFAN\OLE - DB_StagingAmiralSite STG_Perfannu.Outputs[Sortie de source OLE DB].Columns[Valeur_Fonds]" />
                     <inputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].Columns[Valeur_Indice]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].Columns[Valeur_Indice]"
                       cachedDataType="numeric"
                       cachedName="Valeur_Indice"
                       cachedPrecision="38"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[PerfIndex]"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[PerfIndex]"
                       lineageId="Package\DFT - T_PERFAN\OLE - DB_StagingAmiralSite STG_Perfannu.Outputs[Sortie de source OLE DB].Columns[Valeur_Indice]" />
                     <inputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].Columns[Annee]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].Columns[Annee]"
                       cachedDataType="i4"
                       cachedName="Annee"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[Year]"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[Year]"
                       lineageId="Package\DFT - T_PERFAN\OLE - DB_StagingAmiralSite STG_Perfannu.Outputs[Sortie de source OLE DB].Columns[Annee]" />
                     <inputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].Columns[id_Part]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].Columns[id_Part]"
                       cachedDataType="i4"
                       cachedName="id_Part"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[FK_Part]"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[FK_Part]"
                       lineageId="Package\DFT - T_PERFAN\DML - Get FK_Part.Outputs[Lookup Match Output].Columns[id_Part]" />
-                    <inputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].Columns[CodeTrad_PerfAnnual]"
-                      cachedDataType="wstr"
-                      cachedLength="11"
-                      cachedName="CodeTrad_PerfAnnual"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[CodeTrad_PerfAnnual]"
-                      lineageId="Package\DFT - T_PERFAN\DC - Add CodeTradPerfAnnual.Outputs[Sortie de colonne dérivée].Columns[CodeTrad_PerfAnnual]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[Id_Perfan]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[Id_Perfan]"
                       dataType="i4"
                       name="Id_Perfan" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[FK_Part]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[FK_Part]"
                       dataType="i4"
                       name="FK_Part" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[CodeTrad_PerfAnnual]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[CodeTrad_PerfAnnual]"
                       dataType="wstr"
                       length="50"
                       name="CodeTrad_PerfAnnual" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[Year]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[Year]"
                       dataType="wstr"
                       length="10"
                       name="Year" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[PerfFund]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[PerfFund]"
                       dataType="r4"
                       name="PerfFund" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input].ExternalColumns[PerfIndex]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input].ExternalColumns[PerfIndex]"
                       dataType="r4"
                       name="PerfIndex" />
                   </externalMetadataColumns>
@@ -13061,50 +13061,50 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output]"
+                  refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Error Output"
-                  synchronousInputId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorDescription]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorDescription]"
                       dataType="wstr"
                       length="1024"
-                      lineageId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Error Output].Columns[ErrorDescription]"
+                      lineageId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Error Output].Columns[ErrorDescription]"
                       name="ErrorDescription" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Output]"
+                  refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Output]"
                   exclusionGroup="1"
                   name="Output"
-                  synchronousInputId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Output].Columns[Id_Perfan]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Output].Columns[Id_Perfan]"
                       dataType="i4"
-                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Output].ExternalColumns[Id_Perfan]"
-                      lineageId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Output].Columns[Id_Perfan]"
+                      externalMetadataColumnId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Output].ExternalColumns[Id_Perfan]"
+                      lineageId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Output].Columns[Id_Perfan]"
                       name="Id_Perfan" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Outputs[Output].ExternalColumns[Id_Perfan]"
+                      refId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Outputs[Output].ExternalColumns[Id_Perfan]"
                       dataType="i4"
                       name="Id_Perfan" />
                   </externalMetadataColumns>
@@ -13483,7 +13483,7 @@
               startId="Package\DFT - T_PERFAN\DML - Get FK_Part.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DFT - T_PERFAN.Paths[Sortie de colonne dérivée]"
-              endId="Package\DFT - T_PERFAN\DMD - T_PERFAN.Inputs[input]"
+              endId="Package\DFT - T_PERFAN\DMD - Push T_PERFAN.Inputs[input]"
               name="Sortie de colonne dérivée"
               startId="Package\DFT - T_PERFAN\DC - Add CodeTradPerfAnnual.Outputs[Sortie de colonne dérivée]" />
             <path
@@ -13510,10 +13510,10 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT - T_TRAD\DMD - T_TRAD"
+              refId="Package\DFT - T_TRAD\DMD - Push T_TRAD"
               componentClassID="Microsoft.ManagedComponentHost"
               description="Loads or modifies data into an object of the MySql database."
-              name="DMD - T_TRAD"
+              name="DMD - Push T_TRAD"
               usesDispositions="true">
               <properties>
                 <property
@@ -13556,7 +13556,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Connections[Devart MySql]"
+                  refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Connections[Devart MySql]"
                   connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
                   description="Devart MySql Connection Manager"
@@ -13564,52 +13564,52 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
+                  refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input]"
                   errorOrTruncationOperation="Insert operation"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[CODE_TRAD]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].Columns[CODE_TRAD]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CODE_TRAD"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
+                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
                       lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]" />
                     <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[LANGUAGE_NM]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].Columns[LANGUAGE_NM]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="LANGUAGE_NM"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
+                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
                       lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]" />
                     <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[TEXT_TX]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].Columns[TEXT_TX]"
                       cachedDataType="wstr"
                       cachedLength="4000"
                       cachedName="TEXT_TX"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
+                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[Value]"
                       lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[id_Trad]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[id_Trad]"
                       dataType="i4"
                       name="id_Trad" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
                       dataType="wstr"
                       length="30"
                       name="CODE_LANGUE" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
                       dataType="wstr"
                       length="30"
                       name="CODE_TRAD" />
                     <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input].ExternalColumns[Value]"
                       dataType="nText"
                       name="Value" />
                   </externalMetadataColumns>
@@ -13617,50 +13617,50 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output]"
+                  refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Error Output"
-                  synchronousInputId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
                       dataType="wstr"
                       length="1024"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
+                      lineageId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
                       name="ErrorDescription" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output]"
+                  refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Output]"
                   exclusionGroup="1"
                   name="Output"
-                  synchronousInputId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
+                  synchronousInputId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Output].Columns[id_Trad]"
                       dataType="i4"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
+                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
+                      lineageId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Output].Columns[id_Trad]"
                       name="id_Trad" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
+                      refId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
                       dataType="i4"
                       name="id_Trad" />
                   </externalMetadataColumns>
@@ -13879,7 +13879,7 @@
           <paths>
             <path
               refId="Package\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
-              endId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
+              endId="Package\DFT - T_TRAD\DMD - Push T_TRAD.Inputs[input]"
               name="Sortie de source OLE DB"
               startId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB]" />
           </paths>
@@ -13939,10 +13939,10 @@
               version="1">
               <components>
                 <component
-                  refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
+                  refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL"
                   componentClassID="Microsoft.ManagedComponentHost"
                   description="Loads or modifies data into an object of the MySql database."
-                  name="DMD - T_HISTO_VL"
+                  name="DMD - Push T_HISTO_VL"
                   usesDispositions="true">
                   <properties>
                     <property
@@ -13985,7 +13985,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Connections[Devart MySql]"
+                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Connections[Devart MySql]"
                       connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
                       connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
                       description="Devart MySql Connection Manager"
@@ -13993,62 +13993,62 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]"
+                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]"
                       errorOrTruncationOperation="Insert operation"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[CodeISIN]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="CodeISIN"
-                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]" />
-                        <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[id_Part]"
-                          cachedDataType="i4"
-                          cachedName="id_Part"
-                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Outputs[Lookup Match Output].Columns[id_Part]" />
-                        <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[Valuation_Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Valuation_Date"
-                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Valuation_Date]" />
-                        <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[Cotation]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[Cotation]"
                           cachedDataType="numeric"
                           cachedName="Cotation"
                           cachedPrecision="36"
                           cachedScale="10"
-                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Cotation]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[Valuation_Date]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Valuation_Date"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[date]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Valuation_Date]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[id_Part]"
+                          cachedDataType="i4"
+                          cachedName="id_Part"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Outputs[Lookup Match Output].Columns[id_Part]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[ISIN_Part]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ISIN_Part"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[id_histo_VL]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[id_histo_VL]"
                           dataType="i4"
                           name="id_histo_VL" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
                           dataType="i4"
                           name="FK_Part" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
                           dataType="wstr"
                           length="30"
                           name="fundisin" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[date]"
                           dataType="dbTimeStamp"
                           name="date" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           dataType="r4"
                           name="VL" />
                       </externalMetadataColumns>
@@ -14056,50 +14056,50 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output]"
+                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Error Output"
-                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]">
+                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                         <outputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
                           dataType="wstr"
                           length="1024"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
                           name="ErrorDescription" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output]"
+                      refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output]"
                       exclusionGroup="1"
                       name="Output"
-                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]">
+                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
                           name="id_histo_VL" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
                           dataType="i4"
                           name="id_histo_VL" />
                       </externalMetadataColumns>
@@ -14174,13 +14174,13 @@
                       name="Lookup Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[CodeISIN]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[ISIN_Part]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
-                          cachedName="CodeISIN"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]"
-                          name="CodeISIN">
+                          cachedName="ISIN_Part"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]"
+                          name="ISIN_Part">
                           <properties>
                             <property
                               dataType="System.String"
@@ -14483,7 +14483,7 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
               <paths>
                 <path
                   refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL.Paths[Lookup Match Output]"
-                  endId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]"
+                  endId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]"
                   name="Lookup Match Output"
                   startId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Outputs[Lookup Match Output]" />
                 <path
@@ -14548,10 +14548,10 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
               version="1">
               <components>
                 <component
-                  refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
+                  refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL"
                   componentClassID="Microsoft.ManagedComponentHost"
                   description="Loads or modifies data into an object of the MySql database."
-                  name="DMD - T_HISTO_VL"
+                  name="DMD - Push T_HISTO_VL"
                   usesDispositions="true">
                   <properties>
                     <property
@@ -14594,7 +14594,7 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Connections[Devart MySql]"
+                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Connections[Devart MySql]"
                       connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
                       connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
                       description="Devart MySql Connection Manager"
@@ -14602,62 +14602,62 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]"
+                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]"
                       errorOrTruncationOperation="Insert operation"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[CodeISIN]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="CodeISIN"
-                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]" />
-                        <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[id_Part]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[id_Part]"
                           cachedDataType="i4"
                           cachedName="id_Part"
-                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
                           lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Outputs[Lookup Match Output].Columns[id_Part]" />
                         <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[Valuation_Date]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[Valuation_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Valuation_Date"
-                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[date]"
                           lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Valuation_Date]" />
                         <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[Cotation]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[Cotation]"
                           cachedDataType="numeric"
                           cachedName="Cotation"
                           cachedPrecision="36"
                           cachedScale="10"
-                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Cotation]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].Columns[ISIN_Part]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ISIN_Part"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[id_histo_VL]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[id_histo_VL]"
                           dataType="i4"
                           name="id_histo_VL" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[FK_Part]"
                           dataType="i4"
                           name="FK_Part" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[fundisin]"
                           dataType="wstr"
                           length="30"
                           name="fundisin" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[date]"
                           dataType="dbTimeStamp"
                           name="date" />
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           dataType="r4"
                           name="VL" />
                       </externalMetadataColumns>
@@ -14665,50 +14665,50 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output]"
+                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Error Output"
-                      synchronousInputId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]">
+                      synchronousInputId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                         <outputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
                           dataType="wstr"
                           length="1024"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Error Output].Columns[ErrorDescription]"
                           name="ErrorDescription" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output]"
+                      refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output]"
                       exclusionGroup="1"
                       name="Output"
-                      synchronousInputId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]">
+                      synchronousInputId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].Columns[id_histo_VL]"
                           name="id_histo_VL" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Outputs[Output].ExternalColumns[id_histo_VL]"
                           dataType="i4"
                           name="id_histo_VL" />
                       </externalMetadataColumns>
@@ -14783,13 +14783,13 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                       name="Lookup Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[CodeISIN]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[ISIN_Part]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
-                          cachedName="CodeISIN"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]"
-                          name="CodeISIN">
+                          cachedName="ISIN_Part"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]"
+                          name="ISIN_Part">
                           <properties>
                             <property
                               dataType="System.String"
@@ -15093,7 +15093,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
               <paths>
                 <path
                   refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL.Paths[Lookup Match Output]"
-                  endId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input]"
+                  endId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL.Inputs[input]"
                   name="Lookup Match Output"
                   startId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Outputs[Lookup Match Output]" />
                 <path
@@ -15134,7 +15134,8 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{353F637F-8097-4690-ADBB-26F866F536C8}"
-              SQLTask:SqlStatementSource="call finechiquier.Maj_FKPart_HistoVL();&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:IsStoredProc="True"
+              SQLTask:SqlStatementSource="Call Maj_FKPart_HistoVL ();" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -15142,7 +15143,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{9FB37B28-788C-4308-BE07-D835223A6F5B}"
+          DTS:DTSID="{91810117-2C4C-4C1F-B1B6-98994BE74372}"
           DTS:From="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -15283,7 +15284,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="243,102"
+          PanelSize="243,103"
           Size="243,146"
           Id="Package\SC - Delete Current Perimetre"
           TopLeft="327.5,5.5" />
@@ -15320,7 +15321,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="229,204"
+          PanelSize="229,205"
           Size="229,248"
           Id="Package\SC - Lancement FULL"
           TopLeft="5.50000000000017,874.5" />
@@ -15336,28 +15337,6 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Size="297,42"
           Id="Package\SC - Lancement INTRADAY\TSQL - Update existing FK_PART T_HISTO_VL"
           TopLeft="5.50000000000003,209.5" />
-        <EdgeLayout
-          Id="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint 1]"
-          TopLeft="154,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint]"
           TopLeft="154,149.5">
@@ -15380,10 +15359,32 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint 1]"
+          TopLeft="154,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="308,306"
+          PanelSize="308,307"
           Size="308,350"
           Id="Package\SC - Lancement INTRADAY"
           TopLeft="295,823.5" />
@@ -15602,37 +15603,35 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     design-time-name="Package\DFT - Push T_PART">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="175,42"
-          Id="Package\DFT - Push T_PART\DMD - Push T_PART"
-          TopLeft="20,119.5" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="203,42"
           Id="Package\DFT - Push T_PART\ADO - Select SAS_T_PART"
-          TopLeft="10,0" />
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DFT - Push T_PART\DMD - Push T_PART"
+          TopLeft="19.5,107.5" />
         <EdgeLayout
           Id="Package\DFT - Push T_PART.Paths[ADO NET Source Output]"
-          TopLeft="109.5,42">
+          TopLeft="107,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,77.5"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,70">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15650,43 +15649,15 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     design-time-name="Package\DFT - SAS_T_PART">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="283,42"
-          Id="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART"
-          TopLeft="5.5,5.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="189,42"
           Id="Package\DFT - SAS_T_PART\Conversion de données"
           TopLeft="52.5,107.5" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\DFT - SAS_T_PART\DMD - SAS_T_PART"
-          TopLeft="60,209.5" />
-        <EdgeLayout
-          Id="Package\DFT - SAS_T_PART.Paths[Sortie de conversion de données]"
-          TopLeft="147,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="283,42"
+          Id="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\DFT - SAS_T_PART.Paths[Sortie de source OLE DB]"
           TopLeft="147,47.5">
@@ -15706,9 +15677,33 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174,42"
+          Id="Package\DFT - SAS_T_PART\DMD - SAS_T_PART"
+          TopLeft="56,229" />
+        <EdgeLayout
+          Id="Package\DFT - SAS_T_PART.Paths[Sortie de conversion de données]"
+          TopLeft="145,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79.5"
+              Start="0,0"
+              End="0,72">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15733,17 +15728,17 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="279,42"
+          Id="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
           Size="166,42"
           Id="Package\DFT - T_MANAGER\DML - Get FK_Part"
           TopLeft="62,107.5" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\DFT - T_MANAGER\DMD - T_MANAGER"
-          TopLeft="59,209.5" />
-        <NodeLayout
-          Size="279,42"
-          Id="Package\DFT - T_MANAGER\OLE - DB_StagingAmiralSite STG_Manager"
-          TopLeft="5.5,5.5" />
+          Size="198,42"
+          Id="Package\DFT - T_MANAGER\DMD - Push T_MANAGER"
+          TopLeft="46,209.5" />
         <EdgeLayout
           Id="Package\DFT - T_MANAGER.Paths[Sortie de source OLE DB]"
           TopLeft="145,47.5">
@@ -15763,9 +15758,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15816,11 +15809,11 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         <NodeLayout
           Size="166,42"
           Id="Package\DFT - T_PERFAN\DML - Get FK_Part"
-          TopLeft="56.5,107.5" />
+          TopLeft="63,107.5" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\DFT - T_PERFAN\DMD - T_PERFAN"
-          TopLeft="68.0000000000001,310.5" />
+          Size="188,42"
+          Id="Package\DFT - T_PERFAN\DMD - Push T_PERFAN"
+          TopLeft="52.0000000000001,311.5" />
         <NodeLayout
           Size="221,42"
           Id="Package\DFT - T_PERFAN\DC - Add CodeTradPerfAnnual"
@@ -15831,7 +15824,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\DFT - T_PERFAN.Paths[Sortie de source OLE DB]"
-          TopLeft="142.75,47.5">
+          TopLeft="146,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15853,18 +15846,18 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - T_PERFAN.Paths[Sortie de colonne dérivée]"
-          TopLeft="147.5,251.5">
+          TopLeft="146,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,51.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15875,7 +15868,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - T_PERFAN.Paths[Lookup Match Output]"
-          TopLeft="142.75,149.5">
+          TopLeft="146,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15917,37 +15910,35 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     design-time-name="Package\DFT - T_TRAD">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\DFT - T_TRAD\DMD - T_TRAD"
-          TopLeft="312,211" />
+          Size="177,42"
+          Id="Package\DFT - T_TRAD\DMD - Push T_TRAD"
+          TopLeft="64,107.5" />
         <NodeLayout
           Size="294,42"
           Id="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions"
-          TopLeft="250,75" />
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
-          TopLeft="398.25,117">
+          TopLeft="152.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,94"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,86.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15980,9 +15971,9 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part"
           TopLeft="59.5,107.5" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
-          TopLeft="56,209.5" />
+          Size="199,42"
+          Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL"
+          TopLeft="43,209.5" />
         <EdgeLayout
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL.Paths[Sortie de source OLE DB]"
           TopLeft="142.5,47.5">
@@ -16002,9 +15993,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16061,9 +16050,9 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part"
           TopLeft="59.5,107.5" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
-          TopLeft="56,209.5" />
+          Size="199,42"
+          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - Push T_HISTO_VL"
+          TopLeft="43,209.5" />
         <EdgeLayout
           Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL.Paths[Sortie de source OLE DB]"
           TopLeft="142.5,47.5">
@@ -16083,9 +16072,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

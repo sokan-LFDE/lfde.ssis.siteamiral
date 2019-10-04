@@ -9,7 +9,7 @@
     <MySqlConnectionManager>
       <ConnectionString>User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=300;Connection Timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES</ConnectionString>
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAABrmxWqQGwvd8FnTxtx9mVaAAAAAASAAACgAAAAEAAAAFtqbFY38MTwWVMmbgZpdVQwAAAAY8g9/5u6V2RyzwgI7M3dd95pIzruZSTnxS7GnSbdyPFDrFw7qAHHbRvjBkMxo2rMFAAAAM17zGDeo5+a9nLw3a0xh3GSFAe4</Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAADYB+ipje//tZ1/NwVcRWiXAAAAAASAAACgAAAAEAAAAHFxLVwNBGv6TrWQE2uCMngwAAAAederZ93dfUNX05xc/+GCZ3tGdW6bZ7v/AiWYn3pmit56tmtVnpPi+tdcmtox+BCSFAAAAF26ImNqube1S6vzrPUAr03mLvYR</Password>
     </MySqlConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

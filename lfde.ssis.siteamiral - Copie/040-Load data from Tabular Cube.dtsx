@@ -12,7 +12,7 @@
   DTS:ObjectName="040-Load data from Tabular Cube"
   DTS:PackageType="5"
   DTS:VersionBuild="55"
-  DTS:VersionGUID="{A9519882-BECC-4D08-BD12-AEE3FFB1DEFA}">
+  DTS:VersionGUID="{C2E48ED2-92AB-4CC0-A3A4-0CC6E731972A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
