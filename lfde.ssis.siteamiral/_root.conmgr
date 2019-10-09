@@ -8,10 +8,10 @@
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:Retain="True"
-      DTS:ConnectionString="User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=300;connection timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;">
+      DTS:ConnectionString="User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=3000;connection timeout=3000;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAADY3dmrhh/zeowYTTXfClKXAAAAAASAAACgAAAAEAAAAI7Q/7iDTsgTnZULU/Pnd6l4AAAA+ZphbGszupQIntocvfLdiJxGKBbJbGY09GDFxFUvkrt6laxENvTY9hFnzaRyv3Obzez3qO9u67C3PHajdWovF/IjQtMKZADgmYymO3NLwqUb7Jy3968RHQXYQwAe+mkGyif9+WQNeGZRJ+vyYbSEuPm0/d15GVwNFAAAAH3L1EVu1XYKGBrQnfsQZTXjRIOW</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAAB4CrepXz1y5K9rwVQLZ4ZeAAAAAASAAACgAAAAEAAAAGlouA8zHh2Z5YBiiM4aQoN4AAAA0WtmkC6bg/mNVFjx358Ht7WK5Rcq86DHoIJEbrivtYKvTkfiB5yE3IhD5rmHqGYLGZhxbvoBB/Et8rVOnf6u2rd7LpBXP1bCR9ACDnfCgtFIfvWyyib5+8UIq0/9lc73f5jyJl6ZEqa0V7jN7/Ks9yNVnUaM14MiFAAAAAkHmlRV5MX/eeHCRKG4BR9HBCRT</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -7,6 +7,7 @@
     DTS:Name="ConnectionString">@[$Project::ECHIQBIVMDB_StagingAmiralSite_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
+      DTS:Retain="True"
       DTS:ConnectionString="Data Source=ECHIQDWH01;Initial Catalog=DB_StagingAmiralSite;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

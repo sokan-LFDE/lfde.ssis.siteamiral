@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="7/11/2019 5:45:18 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="010-Load Indicateur de Risque"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{73C4B335-0B1C-472D-A712-677B66E0E74C}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{665C4AA2-5BB3-4C31-AB20-7D22FC6F9A07}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -282,94 +282,6 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
       DTS:ObjectName="ISIN_FONDS">
       <DTS:VariableValue
         DTS:DataType="8">FR0010330902</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{2FC5D973-09F7-4888-8A28-71C90936C6E7}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="isin_fonds_dataset">
-      <DTS:VariableValue
-        DTS:DataSubType="ManagedSerializable"
-        DTS:DataType="13">
-        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-          <SOAP-ENV:Body>
-            <xsd:anyType
-              id="ref-1"></xsd:anyType>
-          </SOAP-ENV:Body>
-        </SOAP-ENV:Envelope>
-      </DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{DBE9A470-CF82-4A6D-BEBC-D0A6991F31B9}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="SUBSTRING( (DT_WSTR, 20) @[User::CurrentFundVLDate],7,4) + &quot;-&quot; + SUBSTRING( (DT_WSTR, 20) @[User::CurrentFundVLDate],4,2) + &quot;-&quot; + SUBSTRING( (DT_WSTR, 20) @[User::CurrentFundVLDate],1,2) + &quot;T00:00:00&quot;"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="MDX_DATE">
-      <DTS:VariableValue
-        DTS:DataType="8">2019-07-11T00:00:00</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{DC215EDC-917D-4D3E-ABC4-C396DAE372A6}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;SELECT &#xA;{&#xA;[Measures].[Volatilite VL 52semaines]&#xA;,[Measures].[Volatilite VL 3ans]&#xA;,[Measures].[Volatilite VL 5ans]&#xA;,[Measures].[Volatilite Indice 52semaines]&#xA;,[Measures].[Volatilite Indice 3ans]&#xA;,[Measures].[Volatilite Indice 5ans]&#xA;,[Measures].[Beta 3ans]&#xA;,[Measures].[Beta 52semaines]&#xA;,[Measures].[Beta 5ans]&#xA;,[Measures].[Alpha 52semaines]&#xA;,[Measures].[Alpha 3ans]&#xA;,[Measures].[Alpha 5ans]&#xA;,[Measures].[Ratio Sharpe 52semaines]&#xA;,[Measures].[Ratio Sharpe 3ans]&#xA;,[Measures].[Ratio Sharpe 5ans]&#xA;,[Measures].[Ratio Information 52semaines]&#xA;,[Measures].[Ratio Information 3ans]&#xA;,[Measures].[Ratio Information 5ans]&#xA;} &#x9;&#xA;ON COLUMNS &#xA;                                    &#x9;&#xA;, NON EMPTY (&#xA;                                    &#x9;&#xA;{  [Part].[Code ISIN Part].&amp;[&quot;+ @[User::ISIN_FONDS]  +&quot;] }&#xA;                        &#x9;&#x9;&#x9;&#x9;&#xA;)  ON ROWS  &#xA;                                    &#x9;&#xA;FROM [Financiere] &#xA;WHERE ([Date].[Hiérarchie Mois].[Date].&amp;[&quot;+ @[User::MDX_DATE]  +&quot;],[Type VL].[Type VL].&amp;[Officielle])&quot;"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="MDX_REQ_Get_IndicateurRisque">
-      <DTS:VariableValue
-        DTS:DataType="8">SELECT 
-{
-[Measures].[Volatilite VL 52semaines]
-,[Measures].[Volatilite VL 3ans]
-,[Measures].[Volatilite VL 5ans]
-,[Measures].[Volatilite Indice 52semaines]
-,[Measures].[Volatilite Indice 3ans]
-,[Measures].[Volatilite Indice 5ans]
-,[Measures].[Beta 3ans]
-,[Measures].[Beta 52semaines]
-,[Measures].[Beta 5ans]
-,[Measures].[Alpha 52semaines]
-,[Measures].[Alpha 3ans]
-,[Measures].[Alpha 5ans]
-,[Measures].[Ratio Sharpe 52semaines]
-,[Measures].[Ratio Sharpe 3ans]
-,[Measures].[Ratio Sharpe 5ans]
-,[Measures].[Ratio Information 52semaines]
-,[Measures].[Ratio Information 3ans]
-,[Measures].[Ratio Information 5ans]
-} 	
-ON COLUMNS 
-                                    	
-, NON EMPTY (
-                                    	
-{  [Part].[Code ISIN Part].&amp;[FR0010330902] }
-                        				
-)  ON ROWS  
-                                    	
-FROM [Financiere] 
-WHERE ([Date].[Hiérarchie Mois].[Date].&amp;[2019-07-11T00:00:00],[Type VL].[Type VL].&amp;[Officielle])</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{D80C09CE-AAD1-48E1-AC48-C26B05CD05CC}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="MDX_Result">
-      <DTS:VariableValue
-        DTS:DataSubType="ManagedSerializable"
-        DTS:DataType="13">
-        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-          <SOAP-ENV:Body>
-            <xsd:anyType
-              id="ref-1"></xsd:anyType>
-          </SOAP-ENV:Body>
-        </SOAP-ENV:Envelope>
-      </DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1066,8 +978,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1614,8 +1526,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2076,8 +1988,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -3704,17 +3616,17 @@ ORDER BY Part[Libelle Part]</property>
       DTS:To="Package\DFT - Indicateurs de Risque" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
-<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql12">
-  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - Indicateurs de Risque"
@@ -3732,7 +3644,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="579.5,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,71"
               Start="0,0"
               End="0,63.5">
@@ -3754,7 +3666,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="578,295">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,80.5"
               Start="0,0"
               End="0,73">
@@ -3778,141 +3690,41 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package\DFT - Indicateurs de Risque">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="240,42"
+          Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque"
+          TopLeft="138.75,108" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5"
+          TopLeft="333,332" />
         <NodeLayout
           Size="253,42"
           Id="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque"
           TopLeft="300,562" />
         <NodeLayout
-          Size="143,42"
-          Id="Package\DFT - Indicateurs de Risque\DC - DateAdd"
-          TopLeft="355,448" />
-        <NodeLayout
-          Size="240,42"
-          Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque"
-          TopLeft="138.75,108" />
-        <EdgeLayout
-          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de colonne dérivée]"
-          TopLeft="426.5,490">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72"
-              Start="0,0"
-              End="0,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="295,42"
           Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday"
           TopLeft="458,108" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\DFT - Indicateurs de Risque\Trier ISIN"
-          TopLeft="196.25,210.5" />
-        <NodeLayout
           Size="169,42"
           Id="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi"
           TopLeft="521,210.5" />
-        <EdgeLayout
-          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de source OLE DB]"
-          TopLeft="605.5,150">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.5"
-              Start="0,0"
-              End="0,53">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de source OLE DB1]"
-          TopLeft="258.75,150">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.5"
-              Start="0,0"
-              End="0,53">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="187,42"
-          Id="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5"
-          TopLeft="333,332" />
-        <EdgeLayout
-          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri]"
-          TopLeft="258.75,252.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="137.916666666667,79.5"
-              Start="0,0"
-              End="137.916666666667,72">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.2953340402969"
-                    Point2="0,47.2953340402969"
-                    Point3="4,47.2953340402969" />
-                  <mssgle:LineSegment
-                    End="133.916666666667,47.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="133.916666666667,47.2953340402969"
-                    Point2="137.916666666667,47.2953340402969"
-                    Point3="137.916666666667,51.2953340402969" />
-                  <mssgle:LineSegment
-                    End="137.916666666667,72" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="143,42"
+          Id="Package\DFT - Indicateurs de Risque\DC - DateAdd"
+          TopLeft="355,448" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\DFT - Indicateurs de Risque\Trier ISIN"
+          TopLeft="196.25,210.5" />
         <EdgeLayout
           Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri1]"
           TopLeft="605.5,252.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-149.166666666667,79.5"
               Start="0,0"
               End="-149.166666666667,72">
@@ -3942,11 +3754,89 @@ ORDER BY Part[Libelle Part]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri]"
+          TopLeft="258.75,252.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="137.916666666667,79.5"
+              Start="0,0"
+              End="137.916666666667,72">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.2953340402969"
+                    Point2="0,47.2953340402969"
+                    Point3="4,47.2953340402969" />
+                  <mssgle:LineSegment
+                    End="133.916666666667,47.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.916666666667,47.2953340402969"
+                    Point2="137.916666666667,47.2953340402969"
+                    Point3="137.916666666667,51.2953340402969" />
+                  <mssgle:LineSegment
+                    End="137.916666666667,72" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de source OLE DB1]"
+          TopLeft="258.75,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de source OLE DB]"
+          TopLeft="605.5,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de jointure de fusion]"
           TopLeft="426.5,374">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,74"
               Start="0,0"
               End="0,66.5">
@@ -3963,10 +3853,32 @@ ORDER BY Part[Libelle Part]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de colonne dérivée]"
+          TopLeft="426.5,490">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,72"
+              Start="0,0"
+              End="0,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
-          Text="Récupération des Alpha en date du dernier vendredi car donnée fausse sinon&#xD;&#xA;"
+          Text="Récupération des Alpha en date du dernier vendredi car donnée fausse sinon&#xA;"
           ParentId="Package\DFT - Indicateurs de Risque"
-          Size="403,60"
+          Size="403,51"
           Id="c6e052ed-10d1-4a93-bb5e-752b4fc647d1"
           TopLeft="522,40">
           <AnnotationLayout.FontInfo>
@@ -3982,6 +3894,14 @@ ORDER BY Part[Libelle Part]</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque">
     <Properties>
       <Property>
@@ -3991,14 +3911,6 @@ ORDER BY Part[Libelle Part]</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

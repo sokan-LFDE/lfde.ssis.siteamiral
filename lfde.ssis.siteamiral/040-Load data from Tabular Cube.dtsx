@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="7/11/2019 5:45:18 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="040-Load data from Tabular Cube"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{A9519882-BECC-4D08-BD12-AEE3FFB1DEFA}">
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{7EF102F0-6841-4343-92EC-B17805DAFF4A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -169,7 +169,7 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
       DTS:CreationName=""
       DTS:DTSID="{DDA876E8-D0A2-41EF-99DD-8F828C9B2252}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;EVALUATE&#xA;VAR myDate = &quot;+ @[User::DAX_DATE_FRIDAY] +&quot;&#xA;RETURN&#xA;SUMMARIZE (&#xA;Part,&#xA;    Part[Code ISIN Part],&#xA;    Part[Libelle Part],&#xA;    \&quot;Volatilite VL 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite VL 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 3ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 5ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite Indice 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 3ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 5ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 3ans\&quot;, CALCULATE (&#xA;        [Beta 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 52semaines\&quot;, CALCULATE (&#xA;        [Beta 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 5ans\&quot;, CALCULATE (&#xA;        [Beta 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 52semaines\&quot;, CALCULATE (&#xA;        [Alpha 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 3ans\&quot;, CALCULATE (&#xA;        [Alpha 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 5ans\&quot;, CALCULATE (&#xA;        [Alpha 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 3ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 5ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Information 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 3ans\&quot;, CALCULATE (&#xA;        [Ratio Information 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 5ans\&quot;, CALCULATE (&#xA;        [Ratio Information 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    )&#xA;)&#xA;ORDER BY Part[Libelle Part]&quot;"
+      DTS:Expression="&quot;EVALUATE&#xA;VAR myDate = &quot;+ @[User::DAX_DATE_FRIDAY] +&quot;&#xA;RETURN&#xA;SUMMARIZE (&#xA;Part,&#xA;    Part[Code ISIN Part],&#xA;    Part[Libelle Part],&#xA;    \&quot;Volatilite VL 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite VL 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 3ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 5ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite Indice 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 3ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 5ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 3ans\&quot;, CALCULATE (&#xA;        [Beta 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 52semaines\&quot;, CALCULATE (&#xA;        [Beta 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 5ans\&quot;, CALCULATE (&#xA;        [Beta 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 52semaines\&quot;, CALCULATE (&#xA;        [Alpha 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 3ans\&quot;, CALCULATE (&#xA;        [Alpha 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 5ans\&quot;, CALCULATE (&#xA;        [Alpha 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 3ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 5ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Information 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 3ans\&quot;, CALCULATE (&#xA;        [Ratio Information 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 5ans\&quot;, CALCULATE (&#xA;        [Ratio Information 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ecart de Suivi 52semaines\&quot;, CALCULATE (&#xA;        [Ecart de Suivi 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ecart de Suivi 3ans]\&quot;, CALCULATE (&#xA;        [Ecart de Suivi 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ecart de Suivi 5ans\&quot;, CALCULATE (&#xA;        [Ecart de Suivi 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    )&#xA;)&#xA;ORDER BY Part[Libelle Part]&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="DAX_REQ_Get_IndicateurRisque_Friday">
@@ -268,6 +268,21 @@ Part,
     ),
     "Ratio Information 5ans", CALCULATE (
         [Ratio Information 5ans],
+        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
+        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
+    ),
+    "Ecart de Suivi 52semaines", CALCULATE (
+        [Ecart de Suivi 52semaines],
+        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
+        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
+    ),
+    "Ecart de Suivi 3ans]", CALCULATE (
+        [Ecart de Suivi 3ans],
+        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
+        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
+    ),
+    "Ecart de Suivi 5ans", CALCULATE (
+        [Ecart de Suivi 5ans],
         FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
         FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
     )
@@ -729,6 +744,21 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                       cachedDataType="r8"
                       cachedName="Alpha 5ans"
                       lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Alpha 5ans]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 52semaines"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 52semaines]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 3ans"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 3ans]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 5ans"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 5ans]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1002,6 +1032,45 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                           name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Alpha 5ans]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 52semaines]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 52semaines]"
+                      name="Ecart de Suivi 52semaines">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 52semaines]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 3ans]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 3ans]"
+                      name="Ecart de Suivi 3ans">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 3ans]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 5ans]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 5ans]"
+                      name="Ecart de Suivi 5ans">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[Ecart de Suivi 5ans]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1066,8 +1135,8 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1216,6 +1285,24 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                       cachedName="CodeISINPart"
                       externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[CodeISINPart]"
                       lineageId="Package\DFT - Indicateurs de Risque\DC - DateAdd.Outputs[Sortie de colonne dérivée].Columns[CodeISINPart]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].Columns[Ecart de Suivi 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 52semaines"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 52semaines]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 52semaines]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].Columns[Ecart de Suivi 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 3ans"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 3ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 3ans]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].Columns[Ecart de Suivi 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 5ans"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 5ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[Ecart de Suivi 5ans]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1311,6 +1398,18 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                       dataType="str"
                       length="50"
                       name="CodeISINPart" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 52semaines]"
+                      dataType="r8"
+                      name="Ecart de Suivi 52semaines" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 3ans]"
+                      dataType="r8"
+                      name="Ecart de Suivi 3ans" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque.Inputs[Entrée de destination OLE DB].ExternalColumns[Ecart de Suivi 5ans]"
+                      dataType="r8"
+                      name="Ecart de Suivi 5ans" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1484,8 +1583,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2032,8 +2131,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2224,6 +2323,33 @@ ORDER BY Part[Libelle Part]</property>
                       lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ratio Information 5ans]"
                       name="Ratio Information 5ans"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 52semaines]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 52semaines]"
+                      name="Ecart de Suivi 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 3ans]]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 3ans]"
+                      name="Ecart de Suivi 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 5ans]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 5ans]"
+                      name="Ecart de Suivi 5ans"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2309,6 +2435,18 @@ ORDER BY Part[Libelle Part]</property>
                       refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 5ans]]"
                       dataType="r8"
                       name="[Ratio Information 5ans]" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 52semaines]]"
+                      dataType="r8"
+                      name="[Ecart de Suivi 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 3ans]]]"
+                      dataType="r8"
+                      name="[Ecart de Suivi 3ans]]" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 5ans]]"
+                      dataType="r8"
+                      name="[Ecart de Suivi 5ans]" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2424,6 +2562,21 @@ ORDER BY Part[Libelle Part]</property>
                       dataType="r8"
                       lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 5ans]]"
                       name="[Ratio Information 5ans]" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
+                      name="[Ecart de Suivi 52semaines]" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
+                      name="[Ecart de Suivi 3ans]]" />
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
+                      name="[Ecart de Suivi 5ans]" />
                     <outputColumn
                       refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
@@ -3403,6 +3556,54 @@ ORDER BY Part[Libelle Part]</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[Ecart de Suivi 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 52semaines"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 52semaines]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[Ecart de Suivi 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 3ans"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 3ans]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[Ecart de Suivi 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Ecart de Suivi 5ans"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 5ans]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3676,6 +3877,45 @@ ORDER BY Part[Libelle Part]</property>
                           name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ratio Information 5ans]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 52semaines]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 52semaines]"
+                      name="Ecart de Suivi 52semaines">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 52semaines]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 3ans]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 3ans]"
+                      name="Ecart de Suivi 3ans">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 3ans]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 5ans]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[Ecart de Suivi 5ans]"
+                      name="Ecart de Suivi 5ans">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Ecart de Suivi 5ans]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3790,8 +4030,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Performance Indice\OLE - DB_StagingAmiralSite STG_CubeFactIndices.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -4049,8 +4289,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Performance Indice\OLE - SSAS - Performance Indices.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -4464,8 +4704,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Performance VL\OLE - DB_StagingAmiralSite STG_CubeFactVL.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -4733,8 +4973,8 @@ ORDER BY Part[Libelle Part]</property>
               <connections>
                 <connection
                   refId="Package\DFT - Performance VL\OLE - SSAS - Performance VL.Connections[OleDbConnection]"
-                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
-                  connectionManagerRefId="{1125897C-2907-41F9-8737-54D629977F62}:invalid"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -5130,7 +5370,7 @@ ORDER BY Part[Libelle Part]</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[Staging_Indicateur_de_Risque];&#xA;TRUNCATE TABLE [dbo].[STG_CubeFactVL];&#xA;TRUNCATE TABLE [dbo].[STG_CubeFactIndices];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[STG_IndicateursDeRisque]&#xA;TRUNCATE TABLE [dbo].[STG_CubeFactVL];&#xA;TRUNCATE TABLE [dbo].[STG_CubeFactIndices];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -5173,13 +5413,13 @@ ORDER BY Part[Libelle Part]</property>
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql12">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - Indicateurs de Risque"
@@ -5205,7 +5445,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="112,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -5227,7 +5467,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="112,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -5249,7 +5489,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="112,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -5271,7 +5511,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="112,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -5297,17 +5537,13 @@ ORDER BY Part[Libelle Part]</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
-          Size="240,42"
-          Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque"
-          TopLeft="137.75,107" />
+          Size="335,42"
+          Id="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque"
+          TopLeft="260,557" />
         <NodeLayout
           Size="187,42"
           Id="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5"
           TopLeft="333,332" />
-        <NodeLayout
-          Size="335,42"
-          Id="Package\DFT - Indicateurs de Risque\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque"
-          TopLeft="260,557" />
         <NodeLayout
           Size="295,42"
           Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday"
@@ -5317,47 +5553,17 @@ ORDER BY Part[Libelle Part]</property>
           Id="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi"
           TopLeft="521,210.5" />
         <NodeLayout
-          Size="143,42"
-          Id="Package\DFT - Indicateurs de Risque\DC - DateAdd"
-          TopLeft="355,448" />
+          Size="240,42"
+          Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque"
+          TopLeft="137.75,107" />
         <NodeLayout
           Size="125,42"
           Id="Package\DFT - Indicateurs de Risque\Trier ISIN"
           TopLeft="196.25,210.5" />
-        <EdgeLayout
-          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri1]"
-          TopLeft="605.5,252.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-149.166666666667,79.5"
-              Start="0,0"
-              End="-149.166666666667,72">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.2953340402969"
-                    Point2="0,47.2953340402969"
-                    Point3="-4,47.2953340402969" />
-                  <mssgle:LineSegment
-                    End="-145.166666666667,47.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-145.166666666667,47.2953340402969"
-                    Point2="-149.166666666667,47.2953340402969"
-                    Point3="-149.166666666667,51.2953340402969" />
-                  <mssgle:LineSegment
-                    End="-149.166666666667,72" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\DFT - Indicateurs de Risque\DC - DateAdd"
+          TopLeft="355,448" />
         <EdgeLayout
           Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri]"
           TopLeft="258.75,252.5">
@@ -5480,10 +5686,44 @@ ORDER BY Part[Libelle Part]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Indicateurs de Risque.Paths[Sortie de tri1]"
+          TopLeft="605.5,252.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-149.166666666667,79.5"
+              Start="0,0"
+              End="-149.166666666667,72">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.2953340402969"
+                    Point2="0,47.2953340402969"
+                    Point3="-4,47.2953340402969" />
+                  <mssgle:LineSegment
+                    End="-145.166666666667,47.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-145.166666666667,47.2953340402969"
+                    Point2="-149.166666666667,47.2953340402969"
+                    Point3="-149.166666666667,51.2953340402969" />
+                  <mssgle:LineSegment
+                    End="-149.166666666667,72" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
-          Text="Récupération des Alpha en date du dernier vendredi car donnée fausse sinon&#xA;"
+          Text="Récupération des Alpha et TE en date du dernier vendredi car donnée fausse sinon&#xA;"
           ParentId="Package\DFT - Indicateurs de Risque"
-          Size="403,51"
+          Size="432,51"
           Id="c6e052ed-10d1-4a93-bb5e-752b4fc647d1"
           TopLeft="522,40">
           <AnnotationLayout.FontInfo>
@@ -5531,7 +5771,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package\DFT - Performance Indice">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="239,42"
           Id="Package\DFT - Performance Indice\OLE - SSAS - Performance Indices"
@@ -5559,7 +5799,9 @@ ORDER BY Part[Libelle Part]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
