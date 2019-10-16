@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="Devart MySql Connection Manager"
   DTS:DTSID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}"
   DTS:CreationName="DevartMySql">
@@ -7,9 +8,9 @@
     DTS:Name="ConnectionString">@[$Project::MySQL_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <MySqlConnectionManager>
-      <ConnectionString>User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=300;Connection Timeout=150;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES</ConnectionString>
+      <ConnectionString>User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=3000;Connection Timeout=3000;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES</ConnectionString>
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAABrmxWqQGwvd8FnTxtx9mVaAAAAAASAAACgAAAAEAAAAFtqbFY38MTwWVMmbgZpdVQwAAAAY8g9/5u6V2RyzwgI7M3dd95pIzruZSTnxS7GnSbdyPFDrFw7qAHHbRvjBkMxo2rMFAAAAM17zGDeo5+a9nLw3a0xh3GSFAe4</Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAABAYtf24CFFDK71UuUmXPd3AAAAAASAAACgAAAAEAAAAAuu4ttAfc2saZODS8i0YMwwAAAATM7bP5RKqhbQ/k5gTEtIxwEuwiLM5I7iPDY3W2p1+le6NmJgNNY/azZfc6E+r6c6FAAAAIOg0yClAH+tYqOVkajr2PXyxYiR</Password>
     </MySqlConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="ECHIQBIVM.DB_StagingAmiralSite"
   DTS:DTSID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}"
   DTS:CreationName="OLEDB">

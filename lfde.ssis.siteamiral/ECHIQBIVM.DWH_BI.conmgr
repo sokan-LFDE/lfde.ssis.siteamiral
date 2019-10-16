@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="ECHIQBIVM DWH_BI"
   DTS:DTSID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}"
   DTS:CreationName="OLEDB">

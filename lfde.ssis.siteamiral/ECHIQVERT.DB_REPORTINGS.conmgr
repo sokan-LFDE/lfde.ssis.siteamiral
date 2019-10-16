@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="ECHIQVERT.DB_REPORTINGS"
   DTS:DTSID="{69200829-C7CF-40A3-A899-53340F914FE1}"
   DTS:CreationName="OLEDB">

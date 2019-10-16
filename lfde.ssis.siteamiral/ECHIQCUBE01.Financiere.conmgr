@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="ECHIQCUBE01.Financiere"
   DTS:DTSID="{1125897C-2907-41F9-8737-54D629977F62}"
   DTS:CreationName="OLEDB">

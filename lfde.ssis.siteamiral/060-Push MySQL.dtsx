@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="060-Push MySQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="166"
-  DTS:VersionGUID="{E8567DD6-32CA-4EC6-B566-63E500BE650B}">
+  DTS:VersionBuild="188"
+  DTS:VersionGUID="{D0BB38A0-9BF1-4C07-9D32-F51C77609B51}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -104,12 +104,6 @@
                   name="input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].Columns[id_Part]"
-                      cachedDataType="i4"
-                      cachedName="id_Part"
-                      externalMetadataColumnId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].ExternalColumns[id_Part]"
-                      lineageId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].Columns[id_Part]" />
-                    <inputColumn
                       refId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].Columns[fundisin]"
                       cachedDataType="wstr"
                       cachedLength="30"
@@ -119,7 +113,7 @@
                     <inputColumn
                       refId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].Columns[fundName]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="fundName"
                       externalMetadataColumnId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].ExternalColumns[fundName]"
                       lineageId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].Columns[fundName]" />
@@ -1371,7 +1365,7 @@
                     <externalMetadataColumn
                       refId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].ExternalColumns[fundName]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="fundName" />
                     <externalMetadataColumn
                       refId="Package\DFT - Push T_PART\DMD - Push T_PART.Inputs[input].ExternalColumns[FundShortName]"
@@ -2338,7 +2332,7 @@
                       refId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].Columns[fundName]"
                       dataType="wstr"
                       externalMetadataColumnId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].ExternalColumns[fundName]"
-                      length="50"
+                      length="100"
                       lineageId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].Columns[fundName]"
                       name="fundName" />
                     <outputColumn
@@ -3589,7 +3583,7 @@
                     <externalMetadataColumn
                       refId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].ExternalColumns[fundName]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="fundName" />
                     <externalMetadataColumn
                       refId="Package\DFT - Push T_PART\DMD - Select SAS_T_PART.Outputs[Source Output].ExternalColumns[FundShortName]"
@@ -6156,7 +6150,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="100"
                       lineageId="Package\DFT - SAS_T_PART\Conversion de données.Outputs[Sortie de conversion de données].Columns[fundName]"
                       name="fundName"
                       truncationRowDisposition="FailComponent">
@@ -7461,7 +7455,7 @@
                       refId="Package\DFT - SAS_T_PART\DMD - SAS_T_PART.Inputs[input].Columns[fundName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="fundName"
                       externalMetadataColumnId="Package\DFT - SAS_T_PART\DMD - SAS_T_PART.Inputs[input].ExternalColumns[fundName]"
                       lineageId="Package\DFT - SAS_T_PART\Conversion de données.Outputs[Sortie de conversion de données].Columns[fundName]" />
@@ -7774,7 +7768,7 @@
                     <externalMetadataColumn
                       refId="Package\DFT - SAS_T_PART\DMD - SAS_T_PART.Inputs[input].ExternalColumns[fundName]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="fundName" />
                     <externalMetadataColumn
                       refId="Package\DFT - SAS_T_PART\DMD - SAS_T_PART.Inputs[input].ExternalColumns[FundShortName]"
@@ -8677,6 +8671,44 @@
                       dataType="i4"
                       name="id_Part" />
                   </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - SAS_T_PART\Multicast UPD"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multidiffusion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Distribue chaque ligne d'entrée à chaque ligne dans au moins une sortie. Par exemple, connectez votre flux de données pour effectuer une copie des données afin que certaines valeurs puissent être masquées avant de les partager avec des partenaires externes."
+              name="Multicast UPD">
+              <inputs>
+                <input
+                  refId="Package\DFT - SAS_T_PART\Multicast UPD.Inputs[Multidiffusion entrée 1]"
+                  name="Multidiffusion entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - SAS_T_PART\Multicast UPD.Outputs[Multidiffusion sortie 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multidiffusion sortie 1"
+                  synchronousInputId="Package\DFT - SAS_T_PART\Multicast UPD.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - SAS_T_PART\Multicast UPD.Outputs[Sortie de multidiffusion 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 1"
+                  synchronousInputId="Package\DFT - SAS_T_PART\Multicast UPD.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - SAS_T_PART\Multicast UPD.Outputs[Sortie de multidiffusion 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 2"
+                  synchronousInputId="Package\DFT - SAS_T_PART\Multicast UPD.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
@@ -10739,16 +10771,146 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, appelez une procédure stockée 'nouvelle configuration d'employé' pour chaque ligne de la table 'nouveaux employés'. Remarque : l'exécution d'une instruction SQL pour chaque ligne d'un flux de données volumineux peut prendre beaucoup de temps."
+              name="SQL - Maj CONF_ISIN_A_PUBLIER"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [ToAmiralSite].[CONF_ISIN_A_PUBLIER_v2]
+  SET 
+      [DATE_TEMPS_PUBLICATION] = GETDATE(), 
+      [DATE_VL] = ?
+WHERE ISIN_FONDS = ?;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Connections[OleDbConnection]"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB]"
+                  errorOrTruncationOperation="Exécution de commande"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de commande OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].Columns[fundLastVLDate_]"
+                      cachedDataType="dbDate"
+                      cachedName="fundLastVLDate_"
+                      externalMetadataColumnId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART.Outputs[Sortie de source OLE DB].Columns[fundLastVLDate_]" />
+                    <inputColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].Columns[fundisin_]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fundisin_"
+                      externalMetadataColumnId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART.Outputs[Sortie de source OLE DB].Columns[fundisin_]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie de commande OLE DB]"
+                  exclusionGroup="1"
+                  name="Sortie de commande OLE DB"
+                  synchronousInputId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie d'erreur de commande OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de commande OLE DB"
+                  synchronousInputId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
+            <path
+              refId="Package\DFT - SAS_T_PART.Paths[Multidiffusion sortie 1]"
+              endId="Package\DFT - SAS_T_PART\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Multidiffusion sortie 1"
+              startId="Package\DFT - SAS_T_PART\Multicast UPD.Outputs[Multidiffusion sortie 1]" />
             <path
               refId="Package\DFT - SAS_T_PART.Paths[Sortie de conversion de données]"
               endId="Package\DFT - SAS_T_PART\DMD - SAS_T_PART.Inputs[input]"
               name="Sortie de conversion de données"
               startId="Package\DFT - SAS_T_PART\Conversion de données.Outputs[Sortie de conversion de données]" />
             <path
+              refId="Package\DFT - SAS_T_PART.Paths[Sortie de multidiffusion 1]"
+              endId="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER.Inputs[Entrée de commande OLE DB]"
+              name="Sortie de multidiffusion 1"
+              startId="Package\DFT - SAS_T_PART\Multicast UPD.Outputs[Sortie de multidiffusion 1]" />
+            <path
               refId="Package\DFT - SAS_T_PART.Paths[Sortie de source OLE DB]"
-              endId="Package\DFT - SAS_T_PART\Conversion de données.Inputs[Entrée de conversion de données]"
+              endId="Package\DFT - SAS_T_PART\Multicast UPD.Inputs[Multidiffusion entrée 1]"
               name="Sortie de source OLE DB"
               startId="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART.Outputs[Sortie de source OLE DB]" />
           </paths>
@@ -11979,397 +12141,6 @@ FROM STG_PerfAnnu;</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\DFT - T_TRAD"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Tâche de flux de données"
-      DTS:DTSID="{AB261873-7FF6-45FF-8DF0-175E474F2E51}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="DFT - T_TRAD"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\DFT - T_TRAD\DMD - T_TRAD"
-              componentClassID="Microsoft.ManagedComponentHost"
-              description="Loads or modifies data into an object of the MySql database."
-              name="DMD - T_TRAD"
-              usesDispositions="true">
-              <properties>
-                <property
-                  dataType="System.Null"
-                  name="DesignObject"
-                  typeConverter="NOTBROWSABLE" />
-                <property
-                  dataType="System.Int32"
-                  description="Number of retries to call operation."
-                  name="Retry Count">5</property>
-                <property
-                  dataType="System.Int32"
-                  description="Waiting second before next retry."
-                  name="Retry Interval">1</property>
-                <property
-                  dataType="System.String"
-                  description="The name of the database object to copy data into."
-                  name="TableName"
-                  typeConverter="Devart.SSIS.Common.Design.TablesListConverter, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">T_TRAD</property>
-                <property
-                  dataType="System.Int32"
-                  description="Destination operation"
-                  name="Operation"
-                  typeConverter="Devart.SSIS.Common.DestinationOperation, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="The size of data packet loaded to the server."
-                  name="BufferSize">262144</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether to use INSERT DELAYED statement syntax."
-                  name="BulkInsertDelayed">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether to add LOCK TABLE clause before data loading."
-                  name="BulkInsertLock">false</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Devart.SSIS.MySql.MySqlDestination, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Connections[Devart MySql]"
-                  connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
-                  description="Devart MySql Connection Manager"
-                  name="Devart MySql" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
-                  errorOrTruncationOperation="Insert operation"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[CODE_TRAD]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="CODE_TRAD"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]" />
-                    <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[LANGUAGE_NM]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="LANGUAGE_NM"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]" />
-                    <inputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[TEXT_TX]"
-                      cachedDataType="wstr"
-                      cachedLength="4000"
-                      cachedName="TEXT_TX"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[id_Trad]"
-                      dataType="i4"
-                      name="id_Trad" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
-                      dataType="wstr"
-                      length="30"
-                      name="CODE_LANGUE" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
-                      dataType="wstr"
-                      length="30"
-                      name="CODE_TRAD" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
-                      dataType="nText"
-                      name="Value" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Error Output"
-                  synchronousInputId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
-                      dataType="wstr"
-                      length="1024"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
-                      name="ErrorDescription" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output]"
-                  exclusionGroup="1"
-                  name="Output"
-                  synchronousInputId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
-                      dataType="i4"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
-                      lineageId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
-                      name="id_Trad" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
-                      dataType="i4"
-                      name="id_Trad" />
-                  </externalMetadataColumns>
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
-              description="Source OLE DB"
-              name="OLE - DB_StagingAmiralSite STG_Traductions"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset">[dbo].[STG_Traductions]</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Commande SQL à exécuter."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="Variable contenant la commande SQL à exécuter."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le mode utilisé pour accéder à la base de données."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="Mappages entre les paramètres de la commande SQL et les variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
-                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB]"
-                  name="Sortie de source OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[ID_TRAD]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[ID_TRAD]"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[ID_TRAD]"
-                      name="ID_TRAD"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[CODE_TRAD]"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]"
-                      name="CODE_TRAD"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[LANGUAGE_NM]"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]"
-                      name="LANGUAGE_NM"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[TEXT_TX]"
-                      length="4000"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]"
-                      name="TEXT_TX"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[SRC]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[SRC]"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[SRC]"
-                      name="SRC"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[PrioritySrc]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[PrioritySrc]"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[PrioritySrc]"
-                      name="PrioritySrc"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[ID_TRAD]"
-                      dataType="i4"
-                      name="ID_TRAD" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[CODE_TRAD]"
-                      dataType="wstr"
-                      length="50"
-                      name="CODE_TRAD" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[LANGUAGE_NM]"
-                      dataType="wstr"
-                      length="50"
-                      name="LANGUAGE_NM" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[TEXT_TX]"
-                      dataType="wstr"
-                      length="4000"
-                      name="TEXT_TX" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[SRC]"
-                      dataType="wstr"
-                      length="50"
-                      name="SRC" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[PrioritySrc]"
-                      dataType="i4"
-                      name="PrioritySrc" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB]"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de source OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ID_TRAD]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ID_TRAD]"
-                      name="ID_TRAD" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[CODE_TRAD]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[CODE_TRAD]"
-                      name="CODE_TRAD" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[LANGUAGE_NM]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[LANGUAGE_NM]"
-                      name="LANGUAGE_NM" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[TEXT_TX]"
-                      dataType="wstr"
-                      length="4000"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[TEXT_TX]"
-                      name="TEXT_TX" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[SRC]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[SRC]"
-                      name="SRC" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[PrioritySrc]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[PrioritySrc]"
-                      name="PrioritySrc" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
-              endId="Package\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
-              name="Sortie de source OLE DB"
-              startId="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\SC - Delete Current Perimetre"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
@@ -12392,7 +12163,7 @@ FROM STG_PerfAnnu;</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{353F637F-8097-4690-ADBB-26F866F536C8}"
-              SQLTask:SqlStatementSource="DELETE FROM T_TRAD;&#xA;DELETE FROM T_MANAGER;&#xA;DELETE FROM T_PERFAN;&#xA;TRUNCATE TABLE SAS_T_PART;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DELETE FROM T_MANAGER;&#xA;DELETE FROM T_PERFAN;&#xA;TRUNCATE TABLE SAS_T_PART;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -12510,6 +12281,14 @@ FROM STG_PerfAnnu;</property>
                           cachedScale="10"
                           externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Cotation]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[ISIN_Part]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ISIN_Part"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[partIsin]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -12526,6 +12305,11 @@ FROM STG_PerfAnnu;</property>
                           dataType="wstr"
                           length="30"
                           name="fundisin" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[partIsin]"
+                          dataType="wstr"
+                          length="30"
+                          name="partIsin" />
                         <externalMetadataColumn
                           refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
                           dataType="dbTimeStamp"
@@ -12657,13 +12441,13 @@ FROM STG_PerfAnnu;</property>
                       name="Lookup Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[CodeISIN]"
+                          refId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[ISIN_Part]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
-                          cachedName="CodeISIN"
-                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]"
-                          name="CodeISIN">
+                          cachedName="ISIN_Part"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]"
+                          name="ISIN_Part">
                           <properties>
                             <property
                               dataType="System.String"
@@ -12979,6 +12763,397 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\SC - Lancement FULL\DFT - T_TRAD"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tâche de flux de données"
+          DTS:DTSID="{AB261873-7FF6-45FF-8DF0-175E474F2E51}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT - T_TRAD"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  description="Loads or modifies data into an object of the MySql database."
+                  name="DMD - T_TRAD"
+                  usesDispositions="true">
+                  <properties>
+                    <property
+                      dataType="System.Null"
+                      name="DesignObject"
+                      typeConverter="NOTBROWSABLE" />
+                    <property
+                      dataType="System.Int32"
+                      description="Number of retries to call operation."
+                      name="Retry Count">5</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Waiting second before next retry."
+                      name="Retry Interval">1</property>
+                    <property
+                      dataType="System.String"
+                      description="The name of the database object to copy data into."
+                      name="TableName"
+                      typeConverter="Devart.SSIS.Common.Design.TablesListConverter, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">T_TRAD</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Destination operation"
+                      name="Operation"
+                      typeConverter="Devart.SSIS.Common.DestinationOperation, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The size of data packet loaded to the server."
+                      name="BufferSize">262144</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether to use INSERT DELAYED statement syntax."
+                      name="BulkInsertDelayed">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether to add LOCK TABLE clause before data loading."
+                      name="BulkInsertLock">false</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Devart.SSIS.MySql.MySqlDestination, Devart.SSIS.MySql.130, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Connections[Devart MySql]"
+                      connectionManagerID="{BA2796B9-5BE0-46A9-93AB-9E20E8680B9C}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Devart MySql Connection Manager]"
+                      description="Devart MySql Connection Manager"
+                      name="Devart MySql" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
+                      errorOrTruncationOperation="Insert operation"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[CODE_TRAD]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CODE_TRAD"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[LANGUAGE_NM]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="LANGUAGE_NM"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].Columns[TEXT_TX]"
+                          cachedDataType="wstr"
+                          cachedLength="4000"
+                          cachedName="TEXT_TX"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[id_Trad]"
+                          dataType="i4"
+                          name="id_Trad" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_LANGUE]"
+                          dataType="wstr"
+                          length="30"
+                          name="CODE_LANGUE" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[CODE_TRAD]"
+                          dataType="wstr"
+                          length="30"
+                          name="CODE_TRAD" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input].ExternalColumns[Value]"
+                          dataType="nText"
+                          name="Value" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Error Output"
+                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
+                          dataType="wstr"
+                          length="1024"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Error Output].Columns[ErrorDescription]"
+                          name="ErrorDescription" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output]"
+                      exclusionGroup="1"
+                      name="Output"
+                      synchronousInputId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].Columns[id_Trad]"
+                          name="id_Trad" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Outputs[Output].ExternalColumns[id_Trad]"
+                          dataType="i4"
+                          name="id_Trad" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+                  description="Source OLE DB"
+                  name="OLE - DB_StagingAmiralSite STG_Traductions"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowset">[dbo].[STG_Traductions]</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Commande SQL à exécuter."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="Variable contenant la commande SQL à exécuter."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie le mode utilisé pour accéder à la base de données."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Mappages entre les paramètres de la commande SQL et les variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Connections[OleDbConnection]"
+                      connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                      description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB]"
+                      name="Sortie de source OLE DB">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[ID_TRAD]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[ID_TRAD]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[ID_TRAD]"
+                          name="ID_TRAD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[CODE_TRAD]"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[CODE_TRAD]"
+                          name="CODE_TRAD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[LANGUAGE_NM]"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[LANGUAGE_NM]"
+                          name="LANGUAGE_NM"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[TEXT_TX]"
+                          length="4000"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[TEXT_TX]"
+                          name="TEXT_TX"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[SRC]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[SRC]"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[SRC]"
+                          name="SRC"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[PrioritySrc]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[PrioritySrc]"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].Columns[PrioritySrc]"
+                          name="PrioritySrc"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[ID_TRAD]"
+                          dataType="i4"
+                          name="ID_TRAD" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[CODE_TRAD]"
+                          dataType="wstr"
+                          length="50"
+                          name="CODE_TRAD" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[LANGUAGE_NM]"
+                          dataType="wstr"
+                          length="50"
+                          name="LANGUAGE_NM" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[TEXT_TX]"
+                          dataType="wstr"
+                          length="4000"
+                          name="TEXT_TX" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[SRC]"
+                          dataType="wstr"
+                          length="50"
+                          name="SRC" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB].ExternalColumns[PrioritySrc]"
+                          dataType="i4"
+                          name="PrioritySrc" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB]"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de source OLE DB">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ID_TRAD]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ID_TRAD]"
+                          name="ID_TRAD" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[CODE_TRAD]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[CODE_TRAD]"
+                          name="CODE_TRAD" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[LANGUAGE_NM]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[LANGUAGE_NM]"
+                          name="LANGUAGE_NM" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[TEXT_TX]"
+                          dataType="wstr"
+                          length="4000"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[TEXT_TX]"
+                          name="TEXT_TX" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[SRC]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[SRC]"
+                          name="SRC" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[PrioritySrc]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[PrioritySrc]"
+                          name="PrioritySrc" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SC - Lancement FULL\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
+                  endId="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD.Inputs[input]"
+                  name="Sortie de source OLE DB"
+                  startId="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions.Outputs[Sortie de source OLE DB]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\SC - Lancement FULL\TSQL - TRUNCATE HISTO_VL"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Tâche d'exécution de requêtes SQL"
@@ -12986,16 +13161,40 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="TSQL - TRUNCATE HISTO_VL"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{353F637F-8097-4690-ADBB-26F866F536C8}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE T_HISTO_VL" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="TRUNCATE TABLE T_HISTO_VL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC - Lancement FULL\TSQL - Truncate T_TRAD"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{8dbe67f6-0c51-4f7e-b00e-5cd0b87b028f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TSQL - Truncate T_TRAD"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{353F637F-8097-4690-ADBB-26F866F536C8}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE T_TRAD;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{6E693AFE-18EE-4065-B51E-DB9BD88DBB0D}"
+          DTS:From="Package\SC - Lancement FULL\TSQL - Truncate T_TRAD"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC - Lancement FULL\DFT - T_TRAD" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
@@ -13004,6 +13203,14 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\SC - Lancement FULL\DFT - T_HISTO_VL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{C5C98203-476B-4500-A584-A270028A602B}"
+          DTS:From="Package\SC - Lancement FULL\DFT - T_HISTO_VL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC - Lancement FULL\TSQL - Truncate T_TRAD" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -13119,6 +13326,14 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                           cachedScale="10"
                           externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[VL]"
                           lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[Cotation]" />
+                        <inputColumn
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].Columns[ISIN_Part]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ISIN_Part"
+                          externalMetadataColumnId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[partIsin]"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -13135,6 +13350,11 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                           dataType="wstr"
                           length="30"
                           name="fundisin" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[partIsin]"
+                          dataType="wstr"
+                          length="30"
+                          name="partIsin" />
                         <externalMetadataColumn
                           refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL.Inputs[input].ExternalColumns[date]"
                           dataType="dbTimeStamp"
@@ -13266,13 +13486,13 @@ FROM [DB_StagingAmiralSite].[dbo].[STG_HistoVL]</property>
                       name="Lookup Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[CodeISIN]"
+                          refId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part.Inputs[Lookup Input].Columns[ISIN_Part]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
-                          cachedName="CodeISIN"
-                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[CodeISIN]"
-                          name="CodeISIN">
+                          cachedName="ISIN_Part"
+                          lineageId="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL.Outputs[Sortie de source OLE DB].Columns[ISIN_Part]"
+                          name="ISIN_Part">
                           <properties>
                             <property
                               dataType="System.String"
@@ -13596,7 +13816,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="TSQL - Delete Current Scope HISTO_VL"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13612,7 +13832,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="TSQL - Update existing FK_PART T_HISTO_VL"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13667,6 +13887,16 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
       DTS:ObjectName="Constraint"
       DTS:To="Package\TSQL - Delete Import Scope T_PART" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B1129428-9A36-4784-8762-F2334B5C815D}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[$Project::LaunchType] == &quot;FULL&quot;"
+      DTS:From="Package\DFT - T_PERFAN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SC - Lancement FULL" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
       DTS:CreationName=""
       DTS:DTSID="{3D05FF54-1E97-414D-B6D9-6CF259AD8651}"
@@ -13683,6 +13913,16 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
       DTS:ObjectName="Constraint 12"
       DTS:To="Package\DFT - T_MANAGER" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{7B7A1FF6-DEF0-49C7-926B-1DAD53C90E65}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[$Project::LaunchType] == &quot;INTRADAY&quot;"
+      DTS:From="Package\DFT - T_PERFAN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SC - Lancement INTRADAY" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
       DTS:DTSID="{0EC0E024-2F15-43FD-B66A-770B85247E18}"
@@ -13690,34 +13930,6 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\DFT - T_PERFAN" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
-      DTS:CreationName=""
-      DTS:DTSID="{79AACB81-82E4-4738-ADAC-26B0F4161497}"
-      DTS:From="Package\DFT - T_PERFAN"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 5"
-      DTS:To="Package\DFT - T_TRAD" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
-      DTS:CreationName=""
-      DTS:DTSID="{4E691BED-290D-4CDC-AE6A-E779DB544823}"
-      DTS:EvalOp="3"
-      DTS:Expression="@[$Project::LaunchType] == &quot;FULL&quot;"
-      DTS:From="Package\DFT - T_TRAD"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 6"
-      DTS:To="Package\SC - Lancement FULL" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
-      DTS:CreationName=""
-      DTS:DTSID="{E53F5D5A-3D46-4D93-BEE5-700CC1B73F24}"
-      DTS:EvalOp="3"
-      DTS:Expression="@[$Project::LaunchType] == &quot;INTRADAY&quot;"
-      DTS:From="Package\DFT - T_TRAD"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 7"
-      DTS:To="Package\SC - Lancement INTRADAY" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
       DTS:CreationName=""
@@ -13756,13 +13968,9 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Id="Package\DFT - T_PERFAN"
           TopLeft="370,619.5" />
         <NodeLayout
-          Size="147,42"
-          Id="Package\DFT - T_TRAD"
-          TopLeft="375.5,721.5" />
-        <NodeLayout
           Size="232,42"
           Id="Package\SC - Delete Current Perimetre\TSQL - Delete Current Perimetre"
-          TopLeft="5.5,5.5" />
+          TopLeft="5.5,6.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -13775,9 +13983,39 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL"
           TopLeft="30,107.5" />
         <NodeLayout
+          Size="147,42"
+          Id="Package\SC - Lancement FULL\DFT - T_TRAD"
+          TopLeft="41,311.5" />
+        <NodeLayout
           Size="218,42"
           Id="Package\SC - Lancement FULL\TSQL - TRUNCATE HISTO_VL"
-          TopLeft="5.50000000000001,5.5" />
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\SC - Lancement FULL\TSQL - Truncate T_TRAD"
+          TopLeft="15.5,209.5" />
+        <EdgeLayout
+          Id="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint]"
+          TopLeft="114.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint 1]"
           TopLeft="114.5,47.5">
@@ -13800,28 +14038,9 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="229,205"
-          Size="229,248"
-          Id="Package\SC - Lancement FULL"
-          TopLeft="5.50000000000017,874.5" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL"
-          TopLeft="69.5,107.5" />
-        <NodeLayout
-          Size="266,42"
-          Id="Package\SC - Lancement INTRADAY\TSQL - Delete Current Scope HISTO_VL"
-          TopLeft="21,5.5" />
-        <NodeLayout
-          Size="297,42"
-          Id="Package\SC - Lancement INTRADAY\TSQL - Update existing FK_PART T_HISTO_VL"
-          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint]"
-          TopLeft="154,149.5">
+          Id="Package\SC - Lancement FULL.PrecedenceConstraints[Constraint 2]"
+          TopLeft="114.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -13833,6 +14052,47 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="229,409"
+          Size="229,452"
+          Id="Package\SC - Lancement FULL"
+          TopLeft="5.50000000000011,721.5" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL"
+          TopLeft="69.5,110.5" />
+        <NodeLayout
+          Size="266,42"
+          Id="Package\SC - Lancement INTRADAY\TSQL - Delete Current Scope HISTO_VL"
+          TopLeft="21,5.5" />
+        <NodeLayout
+          Size="297,42"
+          Id="Package\SC - Lancement INTRADAY\TSQL - Update existing FK_PART T_HISTO_VL"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\SC - Lancement INTRADAY.PrecedenceConstraints[Constraint]"
+          TopLeft="154,152.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13847,14 +14107,14 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,60"
+              EndConnector="0,63"
               Start="0,0"
-              End="0,52.5">
+              End="0,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13869,7 +14129,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           PanelSize="308,307"
           Size="308,350"
           Id="Package\SC - Lancement INTRADAY"
-          TopLeft="295,823.5" />
+          TopLeft="295,772.5" />
         <NodeLayout
           Size="252,42"
           Id="Package\TSQL - Delete Import Scope T_PART"
@@ -13894,6 +14154,42 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="424,661.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-304,60"
+              Start="0,0"
+              End="-304,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.3609022556391" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.3609022556391"
+                    Point2="0,24.3609022556391"
+                    Point3="-4,24.3609022556391" />
+                  <mssgle:LineSegment
+                    End="-300,24.3609022556391" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-300,24.3609022556391"
+                    Point2="-304,24.3609022556391"
+                    Point3="-304,28.3609022556391" />
+                  <mssgle:LineSegment
+                    End="-304,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-160,29.3609022556391,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13941,6 +14237,42 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="474,661.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-25,111"
+              Start="0,0"
+              End="-25,103.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0676691729323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.0676691729323"
+                    Point2="0,45.0676691729323"
+                    Point3="-4,45.0676691729323" />
+                  <mssgle:LineSegment
+                    End="-21,45.0676691729323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,45.0676691729323"
+                    Point2="-25,45.0676691729323"
+                    Point3="-25,49.0676691729323" />
+                  <mssgle:LineSegment
+                    End="-25,103.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.5,50.0676691729323,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="449,559.5">
           <EdgeLayout.Curve>
@@ -13960,100 +14292,6 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="449,661.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="425.833333333333,763.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-305.833333333333,111"
-              Start="0,0"
-              End="-305.833333333333,103.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.1170928667564" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.1170928667564"
-                    Point2="0,45.1170928667564"
-                    Point3="-4,45.1170928667564" />
-                  <mssgle:LineSegment
-                    End="-301.833333333333,45.1170928667564" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-301.833333333333,45.1170928667564"
-                    Point2="-305.833333333333,45.1170928667564"
-                    Point3="-305.833333333333,49.1170928667564" />
-                  <mssgle:LineSegment
-                    End="-305.833333333333,103.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-160.916666666667,50.1170928667564,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="472.166666666667,763.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-23.1666666666666,60"
-              Start="0,0"
-              End="-23.1666666666666,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.3876177658143" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.3876177658143"
-                    Point2="0,24.3876177658143"
-                    Point3="-4,24.3876177658143" />
-                  <mssgle:LineSegment
-                    End="-19.1666666666666,24.3876177658143" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19.1666666666666,24.3876177658143"
-                    Point2="-23.1666666666666,24.3876177658143"
-                    Point3="-23.1666666666666,28.3876177658143" />
-                  <mssgle:LineSegment
-                    End="-23.1666666666666,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-19.5833333333333,29.3876177658143,16,16"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14087,13 +14325,13 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="175,42"
-          Id="Package\DFT - Push T_PART\DMD - Push T_PART"
-          TopLeft="20.5,107.5" />
-        <NodeLayout
           Size="205,42"
           Id="Package\DFT - Push T_PART\DMD - Select SAS_T_PART"
           TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DFT - Push T_PART\DMD - Push T_PART"
+          TopLeft="20.5,107.5" />
         <EdgeLayout
           Id="Package\DFT - Push T_PART.Paths[Source Output]"
           TopLeft="108,47.5">
@@ -14123,22 +14361,30 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     design-time-name="Package\DFT - SAS_T_PART">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="283,42"
           Id="Package\DFT - SAS_T_PART\OLE - DB_StagingAmiralSite - STG_T_PART"
-          TopLeft="5.5,5.5" />
+          TopLeft="234.5,5.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\DFT - SAS_T_PART\Multicast UPD"
+          TopLeft="304,107.5" />
         <NodeLayout
           Size="189,42"
           Id="Package\DFT - SAS_T_PART\Conversion de données"
-          TopLeft="52.5,107.5" />
+          TopLeft="5.50000000000006,209.5" />
         <NodeLayout
           Size="174,42"
           Id="Package\DFT - SAS_T_PART\DMD - SAS_T_PART"
-          TopLeft="60,209.5" />
+          TopLeft="13.0000000000001,311.5" />
+        <NodeLayout
+          Size="241,42"
+          Id="Package\DFT - SAS_T_PART\SQL - Maj CONF_ISIN_A_PUBLIER"
+          TopLeft="255.5,209.5" />
         <EdgeLayout
-          Id="Package\DFT - SAS_T_PART.Paths[Sortie de conversion de données]"
-          TopLeft="147,149.5">
+          Id="Package\DFT - SAS_T_PART.Paths[Sortie de source OLE DB]"
+          TopLeft="376,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -14159,8 +14405,42 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - SAS_T_PART.Paths[Sortie de source OLE DB]"
-          TopLeft="147,47.5">
+          Id="Package\DFT - SAS_T_PART.Paths[Sortie de multidiffusion 1]"
+          TopLeft="398.666666666667,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-22.6666666666666,60"
+              Start="0,0"
+              End="-22.6666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.3956043956044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.3956043956044"
+                    Point2="0,24.3956043956044"
+                    Point3="-4,24.3956043956044" />
+                  <mssgle:LineSegment
+                    End="-18.6666666666666,24.3956043956044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.6666666666666,24.3956043956044"
+                    Point2="-22.6666666666666,24.3956043956044"
+                    Point3="-22.6666666666666,28.3956043956044" />
+                  <mssgle:LineSegment
+                    End="-22.6666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - SAS_T_PART.Paths[Sortie de conversion de données]"
+          TopLeft="100,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -14172,6 +14452,40 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - SAS_T_PART.Paths[Multidiffusion sortie 1]"
+          TopLeft="353.333333333333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-253.333333333333,60"
+              Start="0,0"
+              End="-253.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.3956043956044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.3956043956044"
+                    Point2="0,24.3956043956044"
+                    Point3="-4,24.3956043956044" />
+                  <mssgle:LineSegment
+                    End="-249.333333333333,24.3956043956044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-249.333333333333,24.3956043956044"
+                    Point2="-253.333333333333,24.3956043956044"
+                    Point3="-253.333333333333,28.3956043956044" />
+                  <mssgle:LineSegment
+                    End="-253.333333333333,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14200,7 +14514,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     design-time-name="Package\DFT - T_MANAGER">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\DFT - T_MANAGER\DML - Get FK_Part"
@@ -14218,7 +14532,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           TopLeft="145,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -14232,9 +14546,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14242,7 +14554,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           TopLeft="145,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -14383,67 +14695,10 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\DFT - T_TRAD">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\DFT - T_TRAD\DMD - T_TRAD"
-          TopLeft="312,211" />
-        <NodeLayout
-          Size="294,42"
-          Id="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions"
-          TopLeft="250,75" />
-        <EdgeLayout
-          Id="Package\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
-          TopLeft="398.25,117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,94"
-              Start="0,0"
-              End="0,86.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\SC - Lancement FULL\DFT - T_HISTO_VL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="274,42"
-          Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL"
-          TopLeft="5.5,5.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DML - Get FK_Part"
@@ -14452,12 +14707,16 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Size="173,42"
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
           TopLeft="56,209.5" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\SC - Lancement FULL\DFT - T_HISTO_VL.Paths[Sortie de source OLE DB]"
           TopLeft="142.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -14471,9 +14730,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14481,7 +14738,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           TopLeft="142.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -14517,14 +14774,63 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\SC - Lancement FULL\DFT - T_TRAD">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\SC - Lancement FULL\DFT - T_TRAD\DMD - T_TRAD"
+          TopLeft="312,211" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions"
+          TopLeft="250,75" />
+        <EdgeLayout
+          Id="Package\SC - Lancement FULL\DFT - T_TRAD.Paths[Sortie de source OLE DB]"
+          TopLeft="398.25,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,94"
+              Start="0,0"
+              End="0,86.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Lancement FULL\DFT - T_TRAD\OLE - DB_StagingAmiralSite STG_Traductions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="274,42"
-          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL"
-          TopLeft="5.5,5.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DML - Get FK_Part"
@@ -14533,12 +14839,16 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           Size="173,42"
           Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\DMD - T_HISTO_VL"
           TopLeft="56,209.5" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL\OLE - DB_StagingAmiralSite STG_HistoVL"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\SC - Lancement INTRADAY\DFT - T_HISTO_VL.Paths[Sortie de source OLE DB]"
           TopLeft="142.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -14552,9 +14862,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14562,7 +14870,7 @@ WHERE Valuation_Date &gt;= DATEADD(month, -1, GETDATE());</property>
           TopLeft="142.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">

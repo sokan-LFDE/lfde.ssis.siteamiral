@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
   DTS:ObjectName="ECHIQDB.VRSDB"
   DTS:DTSID="{F4B3DDCC-F223-4C4B-A8C1-5EBDD4707FCA}"
   DTS:CreationName="OLEDB">
