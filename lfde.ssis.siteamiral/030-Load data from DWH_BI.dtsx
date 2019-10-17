@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/20/2019 4:01:22 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="030-Load data from DWH_BI"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{5EAE28F0-1253-4385-BAF9-398AAEBBC5EB}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{7BAF7862-0F7D-4CB5-99F7-D2E489D22E03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -90,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -407,6 +407,14 @@
                       cachedName="DateSicavisation"
                       externalMetadataColumnId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[DateSicavisation]"
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[DateSicavisation]" />
+                    <inputColumn
+                      refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].Columns[Strategie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Strategie"
+                      externalMetadataColumnId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[Strategie]"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[Strategie]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -632,6 +640,12 @@
                       refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[DateSicavisation]"
                       dataType="dbTimeStamp"
                       name="DateSicavisation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[Strategie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Strategie" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -711,8 +725,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Connections[OleDbConnection]"
-                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
-                  connectionManagerRefId="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
+                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM DWH_BI]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1148,6 +1162,17 @@
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[DateSicavisation]"
                       name="DateSicavisation"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[Strategie]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].ExternalColumns[Strategie]"
+                      length="50"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[Strategie]"
+                      name="Strategie"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1373,6 +1398,12 @@
                       refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].ExternalColumns[DateSicavisation]"
                       dataType="dbTimeStamp"
                       name="DateSicavisation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].ExternalColumns[Strategie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Strategie" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1644,6 +1675,13 @@
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[DateSicavisation]"
                       name="DateSicavisation" />
                     <outputColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[Strategie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[Strategie]"
+                      name="Strategie" />
+                    <outputColumn
                       refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
@@ -1744,8 +1782,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - FactVL\OLE - DB_StagingAmiralSite STG_FactVL.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1891,8 +1929,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - FactVL\OLE - DWH_BI - PS_ALIM_STG_FactVL.Connections[OleDbConnection]"
-                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
-                  connectionManagerRefId="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
+                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM DWH_BI]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2102,8 +2140,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Info Gérants\OLE - DB_StagingAmiralSite STG_Manager.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2277,8 +2315,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Info Gérants\OLE - DWH_BI - PS_ALIM_STG_Manager.Connections[OleDbConnection]"
-                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
-                  connectionManagerRefId="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
+                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM DWH_BI]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2536,8 +2574,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Part and Index\OLE - DB_StagingAmiralSite STG_PartAndIndex.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2693,8 +2731,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - Part and Index\OLE - DWH_BI - PS_ALIM_STG_PartAndIndex.Connections[OleDbConnection]"
-                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
-                  connectionManagerRefId="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
+                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM DWH_BI]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -2922,8 +2960,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - VL Histo\OLE - DB_StagingAmiralSite STG_HistoVL.Connections[OleDbConnection]"
-                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
-                  connectionManagerRefId="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:invalid"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -3093,8 +3131,8 @@
               <connections>
                 <connection
                   refId="Package\DFT - VL Histo\OLE - DWH_BI - PS_ALIM_STG_HistoVL.Connections[OleDbConnection]"
-                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
-                  connectionManagerRefId="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:invalid"
+                  connectionManagerID="{BAA8CD72-5BFE-43A6-9B81-5D435ECAB273}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM DWH_BI]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -3337,7 +3375,7 @@
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql12">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">

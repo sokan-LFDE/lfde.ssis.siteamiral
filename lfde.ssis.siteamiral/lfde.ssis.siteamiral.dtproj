@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">UC-0161</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAABgZ6xw/FzLJHu9PW8z5dEsAAAAAASAAACgAAAAEAAAACf8cgqglS2DoLG+pyC594OIAAAAgj7X+7jEryxzraKPlRO79XwZcJvfmGk8xeCPiQoFy0HcrKPQkFnR44YDRGaXnJuiDB3fsNtOG7kJfVRVVORLD/3cPwX9dHBosH9zDIxim0oedkUPHuJusDdQE1NRReK5x+LvFJuvry+1cM8GBteVnb2zcKmRrntq/GJm2gJJuxVBQPvGHqyUpxQAAAC1dkEp7PMx+ysxzBzYabCNrSBbnw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAAAcApyI3X3IlUJghNVDjy9LAAAAAASAAACgAAAAEAAAACAgLIJXtp3HGcW4r1IOfEuIAAAALVeaMU6jC3u/16H+LvD3bPMEJcvGcsw2SQcBi4PX0Hv4r0kh3qjS0n0ZgGK5qL+3e+SCHOK9opoutcEvVjXa5ZBulWnaq79B/rNo4dSmFPCIN9ufIS1RgrsWf7Ie37K8QpRD5J4q++MN0XHuqFzJ9wAYT6XUIRicsIunk+tglLIp7DCiCfQW5xQAAAAnfF93yxfDcOuOeu3lqTtRWuBmVg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -757,10 +757,10 @@
                 <SSIS:Property SSIS:Name="Name">050-Prepare all data</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">97</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">98</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F0DF28F7-0863-4152-9C50-0DFD2388CDDB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{63CD343E-719F-4F5E-AF77-DBF773D54748}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -979,21 +979,6 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.FFCM - Fichier IndicesGP.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">\\ECHIQFILEPROCESS\Fichiers_SSIS$\SiteAmiral\CSV\indicesGP.csv</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.FFCM - Fichier IndicesGP.DataRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -1081,6 +1066,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
