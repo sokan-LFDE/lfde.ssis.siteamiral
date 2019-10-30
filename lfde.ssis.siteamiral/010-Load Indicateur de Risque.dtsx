@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="010-Load Indicateur de Risque"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{665C4AA2-5BB3-4C31-AB20-7D22FC6F9A07}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{8283F17D-E001-4D45-A500-223913C61043}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -169,108 +169,32 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
       DTS:CreationName=""
       DTS:DTSID="{7D3D0A83-6E8C-4130-9527-07F3225F96DC}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;EVALUATE&#xA;VAR myDate = &quot;+ @[User::DAX_DATE_FRIDAY] +&quot;&#xA;RETURN&#xA;SUMMARIZE (&#xA;Part,&#xA;    Part[Code ISIN Part],&#xA;    Part[Libelle Part],&#xA;    \&quot;Volatilite VL 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite VL 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 3ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite VL 5ans\&quot;, CALCULATE (&#xA;        [Volatilite VL 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 52semaines\&quot;, CALCULATE (&#xA;        [Volatilite Indice 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 3ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Volatilite Indice 5ans\&quot;, CALCULATE (&#xA;        [Volatilite Indice 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 3ans\&quot;, CALCULATE (&#xA;        [Beta 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 52semaines\&quot;, CALCULATE (&#xA;        [Beta 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Beta 5ans\&quot;, CALCULATE (&#xA;        [Beta 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 52semaines\&quot;, CALCULATE (&#xA;        [Alpha 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 3ans\&quot;, CALCULATE (&#xA;        [Alpha 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Alpha 5ans\&quot;, CALCULATE (&#xA;        [Alpha 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 3ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Sharpe 5ans\&quot;, CALCULATE (&#xA;        [Ratio Sharpe 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 52semaines\&quot;, CALCULATE (&#xA;        [Ratio Information 52semaines],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 3ans\&quot;, CALCULATE (&#xA;        [Ratio Information 3ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    ),&#xA;    \&quot;Ratio Information 5ans\&quot;, CALCULATE (&#xA;        [Ratio Information 5ans],&#xA;        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),&#xA;        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )&#xA;    )&#xA;)&#xA;ORDER BY Part[Libelle Part]&quot;"
+      DTS:Expression="&quot;DEFINE&#xA;    VAR FilterDate =&#xA;        TREATAS ( {  &quot;+ @[User::DAX_DATE_FRIDAY] +&quot; }, 'Date'[Date_ID] )&#xA;    VAR FilterTypeVL =&#xA;        TREATAS ( { 2 }, 'Type VL'[Id_DimTypeVL] )&#xA;    VAR FilterValidite =&#xA;        TREATAS ( { \&quot;Validé\&quot; }, 'Validité'[Validite] )&#xA;EVALUATE&#xA;SUMMARIZECOLUMNS (&#xA;    Part[Code ISIN Fonds],&#xA;    Part[Code ISIN Part],&#xA;    Part[Libelle Part],&#xA;    FilterDate,&#xA;    FilterTypeVL,&#xA;    FilterValidite,&#xA;    \&quot;Alpha 52semaines\&quot;, [Alpha 52semaines],&#xA;    \&quot;Alpha 3ans\&quot;, [Alpha 3ans],&#xA;    \&quot;Alpha 5ans\&quot;, [Alpha 5ans],&#xA;    \&quot;Ecart de Suivi 52semaines\&quot;, [Ecart de Suivi 52semaines],&#xA;    \&quot;Ecart de Suivi 3ans]\&quot;, [Ecart de Suivi 3ans],&#xA;    \&quot;Ecart de Suivi 5ans\&quot;, [Ecart de Suivi 5ans]&#xA;)&#xA;ORDER BY Part[Libelle Part]&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="DAX_REQ_Get_IndicateurRisque_Friday">
       <DTS:VariableValue
-        DTS:DataType="8">EVALUATE
-VAR myDate = 20190719
-RETURN
-SUMMARIZE (
-Part,
+        DTS:DataType="8">DEFINE
+    VAR FilterDate =
+        TREATAS ( {  20190719 }, 'Date'[Date_ID] )
+    VAR FilterTypeVL =
+        TREATAS ( { 2 }, 'Type VL'[Id_DimTypeVL] )
+    VAR FilterValidite =
+        TREATAS ( { "Validé" }, 'Validité'[Validite] )
+EVALUATE
+SUMMARIZECOLUMNS (
+    Part[Code ISIN Fonds],
     Part[Code ISIN Part],
     Part[Libelle Part],
-    "Volatilite VL 52semaines", CALCULATE (
-        [Volatilite VL 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Volatilite VL 3ans", CALCULATE (
-        [Volatilite VL 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Volatilite VL 5ans", CALCULATE (
-        [Volatilite VL 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Volatilite Indice 52semaines", CALCULATE (
-        [Volatilite Indice 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Volatilite Indice 3ans", CALCULATE (
-        [Volatilite Indice 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Volatilite Indice 5ans", CALCULATE (
-        [Volatilite Indice 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Beta 3ans", CALCULATE (
-        [Beta 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Beta 52semaines", CALCULATE (
-        [Beta 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Beta 5ans", CALCULATE (
-        [Beta 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Alpha 52semaines", CALCULATE (
-        [Alpha 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Alpha 3ans", CALCULATE (
-        [Alpha 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Alpha 5ans", CALCULATE (
-        [Alpha 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Sharpe 52semaines", CALCULATE (
-        [Ratio Sharpe 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Sharpe 3ans", CALCULATE (
-        [Ratio Sharpe 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Sharpe 5ans", CALCULATE (
-        [Ratio Sharpe 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Information 52semaines", CALCULATE (
-        [Ratio Information 52semaines],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Information 3ans", CALCULATE (
-        [Ratio Information 3ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    ),
-    "Ratio Information 5ans", CALCULATE (
-        [Ratio Information 5ans],
-        FILTER ( 'Date', 'Date'[Date_ID] = myDate ),
-        FILTER ( 'Type VL', 'Type VL'[Id_DimTypeVL] = 2 )
-    )
+    FilterDate,
+    FilterTypeVL,
+    FilterValidite,
+    "Alpha 52semaines", [Alpha 52semaines],
+    "Alpha 3ans", [Alpha 3ans],
+    "Alpha 5ans", [Alpha 5ans],
+    "Ecart de Suivi 52semaines", [Ecart de Suivi 52semaines],
+    "Ecart de Suivi 3ans]", [Ecart de Suivi 3ans],
+    "Ecart de Suivi 5ans", [Ecart de Suivi 5ans]
 )
 ORDER BY Part[Libelle Part]</DTS:VariableValue>
     </DTS:Variable>
@@ -555,6 +479,21 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                       cachedDataType="r8"
                       cachedName="[Alpha 5ans]"
                       lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Alpha 5ans]]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 52semaines]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 52semaines]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 52semaines]]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 3ans]]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 3ans]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 3ans]]]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 5ans]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 5ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 5ans]]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -826,6 +765,45 @@ ORDER BY Part[Libelle Part]</DTS:VariableValue>
                           dataType="System.Int32"
                           description="Colonne d'entrée associée à cette colonne de sortie"
                           name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Alpha 5ans]]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 52semaines]]"
+                      name="[Ecart de Suivi 52semaines]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 52semaines]]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 3ans]]"
+                      name="[Ecart de Suivi 3ans]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 3ans]]]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 5ans]]"
+                      name="[Ecart de Suivi 5ans]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Inputs[Entrée droite de jointure de fusion].Columns[[Ecart de Suivi 5ans]]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1584,139 +1562,41 @@ ORDER BY Part[Libelle Part]</property>
                       name="[Alpha 5ans]"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 52semaines]]"
-                      dataType="r8"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 52semaines]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 52semaines]]"
-                      name="[Volatilite VL 52semaines]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Fonds]]"
+                      length="255"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      name="Part[Code ISIN Fonds]"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 3ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 3ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 3ans]]"
-                      name="[Volatilite VL 3ans]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 52semaines]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
+                      name="[Ecart de Suivi 52semaines]"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 5ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 5ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 5ans]]"
-                      name="[Volatilite VL 5ans]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 3ans]]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
+                      name="[Ecart de Suivi 3ans]]"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 52semaines]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
-                      name="[Volatilite Indice 52semaines]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 3ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 3ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 3ans]]"
-                      name="[Volatilite Indice 3ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 5ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 5ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 5ans]]"
-                      name="[Volatilite Indice 5ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 3ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 3ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 3ans]]"
-                      name="[Beta 3ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 52semaines]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 52semaines]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 52semaines]]"
-                      name="[Beta 52semaines]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 5ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 5ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 5ans]]"
-                      name="[Beta 5ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 52semaines]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
-                      name="[Ratio Sharpe 52semaines]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 3ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
-                      name="[Ratio Sharpe 3ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 5ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
-                      name="[Ratio Sharpe 5ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 52semaines]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 52semaines]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 52semaines]]"
-                      name="[Ratio Information 52semaines]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 3ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 3ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 3ans]]"
-                      name="[Ratio Information 3ans]"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 5ans]]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 5ans]]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 5ans]]"
-                      name="[Ratio Information 5ans]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 5ans]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
+                      name="[Ecart de Suivi 5ans]"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1744,65 +1624,22 @@ ORDER BY Part[Libelle Part]</property>
                       dataType="r8"
                       name="[Alpha 5ans]" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 52semaines]]"
-                      dataType="r8"
-                      name="[Volatilite VL 52semaines]" />
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Fonds]]"
+                      dataType="wstr"
+                      length="255"
+                      name="Part[Code ISIN Fonds]" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 3ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 52semaines]]"
                       dataType="r8"
-                      name="[Volatilite VL 3ans]" />
+                      name="[Ecart de Suivi 52semaines]" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 5ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 3ans]]]"
                       dataType="r8"
-                      name="[Volatilite VL 5ans]" />
+                      name="[Ecart de Suivi 3ans]]" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 52semaines]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ecart de Suivi 5ans]]"
                       dataType="r8"
-                      name="[Volatilite Indice 52semaines]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 3ans]]"
-                      dataType="r8"
-                      name="[Volatilite Indice 3ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 5ans]]"
-                      dataType="r8"
-                      name="[Volatilite Indice 5ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 3ans]]"
-                      dataType="r8"
-                      name="[Beta 3ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 52semaines]]"
-                      dataType="r8"
-                      name="[Beta 52semaines]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 5ans]]"
-                      dataType="r8"
-                      name="[Beta 5ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 52semaines]]"
-                      dataType="r8"
-                      name="[Ratio Sharpe 52semaines]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 3ans]]"
-                      dataType="r8"
-                      name="[Ratio Sharpe 3ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 5ans]]"
-                      dataType="r8"
-                      name="[Ratio Sharpe 5ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 52semaines]]"
-                      dataType="r8"
-                      name="[Ratio Information 52semaines]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 3ans]]"
-                      dataType="r8"
-                      name="[Ratio Information 3ans]" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 5ans]]"
-                      dataType="r8"
-                      name="[Ratio Information 5ans]" />
+                      name="[Ecart de Suivi 5ans]" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1817,6 +1654,12 @@ ORDER BY Part[Libelle Part]</property>
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      name="Part[Code ISIN Fonds]" />
+                    <outputColumn
                       refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Part]]"
                       dataType="wstr"
                       length="255"
@@ -1828,51 +1671,6 @@ ORDER BY Part[Libelle Part]</property>
                       length="255"
                       lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Libelle Part]]"
                       name="Part[Libelle Part]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 52semaines]]"
-                      name="[Volatilite VL 52semaines]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 3ans]]"
-                      name="[Volatilite VL 3ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 5ans]]"
-                      name="[Volatilite VL 5ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
-                      name="[Volatilite Indice 52semaines]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 3ans]]"
-                      name="[Volatilite Indice 3ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 5ans]]"
-                      name="[Volatilite Indice 5ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 3ans]]"
-                      name="[Beta 3ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 52semaines]]"
-                      name="[Beta 52semaines]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 5ans]]"
-                      name="[Beta 5ans]" />
                     <outputColumn
                       refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Alpha 52semaines]]"
                       dataType="r8"
@@ -1889,35 +1687,20 @@ ORDER BY Part[Libelle Part]</property>
                       lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Alpha 5ans]]"
                       name="[Alpha 5ans]" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
-                      name="[Ratio Sharpe 52semaines]" />
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 52semaines]]"
+                      name="[Ecart de Suivi 52semaines]" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
-                      name="[Ratio Sharpe 3ans]" />
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 3ans]]]"
+                      name="[Ecart de Suivi 3ans]]" />
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
-                      name="[Ratio Sharpe 5ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 52semaines]]"
-                      name="[Ratio Information 52semaines]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 3ans]]"
-                      name="[Ratio Information 3ans]" />
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 5ans]]"
-                      name="[Ratio Information 5ans]" />
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ecart de Suivi 5ans]]"
+                      name="[Ecart de Suivi 5ans]" />
                     <outputColumn
                       refId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
@@ -2123,6 +1906,24 @@ ORDER BY Part[Libelle Part]</property>
                       cachedName="CodeISINPart"
                       externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[Code ISIN Part]"
                       lineageId="Package\DFT - Indicateurs de Risque\DC - DateAdd.Outputs[Sortie de colonne dérivée].Columns[CodeISINPart]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].Columns[[Ecart de Suivi 52semaines]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 52semaines]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi1an]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 52semaines]]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].Columns[[Ecart de Suivi 3ans]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 3ans]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi3ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 3ans]]" />
+                    <inputColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].Columns[[Ecart de Suivi 5ans]]"
+                      cachedDataType="r8"
+                      cachedName="[Ecart de Suivi 5ans]"
+                      externalMetadataColumnId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi5ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\Merge Join Alpha 1 3 5.Outputs[Sortie de jointure de fusion].Columns[[Ecart de Suivi 5ans]]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2246,6 +2047,18 @@ ORDER BY Part[Libelle Part]</property>
                       dataType="str"
                       length="50"
                       name="RatioInformation5ans" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi1an]"
+                      dataType="r8"
+                      name="EcartDeSuivi1an" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi3ans]"
+                      dataType="r8"
+                      name="EcartDeSuivi3ans" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Indicateurs de Risque\OLE - Staging_Indicateur_De_Risque.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi5ans]"
+                      dataType="r8"
+                      name="EcartDeSuivi5ans" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3003,10 +2816,10 @@ ORDER BY Part[Libelle Part]</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite VL 52semaines]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ecart de Suivi 52semaines]]"
                       cachedDataType="r8"
-                      cachedName="[Volatilite VL 52semaines]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 52semaines]]">
+                      cachedName="[Ecart de Suivi 52semaines]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 52semaines]]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3019,10 +2832,10 @@ ORDER BY Part[Libelle Part]</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite VL 3ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ecart de Suivi 3ans]]]"
                       cachedDataType="r8"
-                      cachedName="[Volatilite VL 3ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 3ans]]">
+                      cachedName="[Ecart de Suivi 3ans]]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 3ans]]]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3035,202 +2848,10 @@ ORDER BY Part[Libelle Part]</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite VL 5ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ecart de Suivi 5ans]]"
                       cachedDataType="r8"
-                      cachedName="[Volatilite VL 5ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 5ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite Indice 52semaines]]"
-                      cachedDataType="r8"
-                      cachedName="[Volatilite Indice 52semaines]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 52semaines]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite Indice 3ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Volatilite Indice 3ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 3ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Volatilite Indice 5ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Volatilite Indice 5ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 5ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Beta 3ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Beta 3ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 3ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Beta 52semaines]]"
-                      cachedDataType="r8"
-                      cachedName="[Beta 52semaines]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 52semaines]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Beta 5ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Beta 5ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 5ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Sharpe 52semaines]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Sharpe 52semaines]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 52semaines]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Sharpe 3ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Sharpe 3ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 3ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Sharpe 5ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Sharpe 5ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 5ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Information 52semaines]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Information 52semaines]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 52semaines]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Information 3ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Information 3ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 3ans]]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Inputs[Entrée de tri].Columns[[Ratio Information 5ans]]"
-                      cachedDataType="r8"
-                      cachedName="[Ratio Information 5ans]"
-                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 5ans]]">
+                      cachedName="[Ecart de Suivi 5ans]"
+                      lineageId="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 5ans]]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3321,198 +2942,42 @@ ORDER BY Part[Libelle Part]</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 52semaines]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 52semaines]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 52semaines]]"
-                      name="[Volatilite VL 52semaines]">
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 52semaines]]"
+                      name="[Ecart de Suivi 52semaines]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 52semaines]]}</property>
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 52semaines]]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 3ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 3ans]]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 3ans]]"
-                      name="[Volatilite VL 3ans]">
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 3ans]]]"
+                      name="[Ecart de Suivi 3ans]]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 3ans]]}</property>
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 3ans]]]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 5ans]]"
+                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 5ans]]"
                       dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite VL 5ans]]"
-                      name="[Volatilite VL 5ans]">
+                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ecart de Suivi 5ans]]"
+                      name="[Ecart de Suivi 5ans]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite VL 5ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 52semaines]]"
-                      name="[Volatilite Indice 52semaines]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 52semaines]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 3ans]]"
-                      name="[Volatilite Indice 3ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 3ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Volatilite Indice 5ans]]"
-                      name="[Volatilite Indice 5ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Volatilite Indice 5ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 3ans]]"
-                      name="[Beta 3ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 3ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 52semaines]]"
-                      name="[Beta 52semaines]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 52semaines]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Beta 5ans]]"
-                      name="[Beta 5ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Beta 5ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 52semaines]]"
-                      name="[Ratio Sharpe 52semaines]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 52semaines]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 3ans]]"
-                      name="[Ratio Sharpe 3ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 3ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Sharpe 5ans]]"
-                      name="[Ratio Sharpe 5ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Sharpe 5ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 52semaines]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 52semaines]]"
-                      name="[Ratio Information 52semaines]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 52semaines]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 3ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 3ans]]"
-                      name="[Ratio Information 3ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 3ans]]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 5ans]]"
-                      dataType="r8"
-                      lineageId="Package\DFT - Indicateurs de Risque\Trier ISIN vendredi.Outputs[Sortie de tri].Columns[[Ratio Information 5ans]]"
-                      name="[Ratio Information 5ans]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de lignage de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ratio Information 5ans]]}</property>
+                          name="SortColumnId">#{Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday.Outputs[Sortie de source OLE DB].Columns[[Ecart de Suivi 5ans]]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3626,7 +3091,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - Indicateurs de Risque"
@@ -3644,7 +3109,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="579.5,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,71"
               Start="0,0"
               End="0,63.5">
@@ -3666,7 +3131,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="578,295">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,80.5"
               Start="0,0"
               End="0,73">
@@ -3690,7 +3155,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package\DFT - Indicateurs de Risque">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
           Size="240,42"
           Id="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque"
@@ -3724,7 +3189,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="605.5,252.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-149.166666666667,79.5"
               Start="0,0"
               End="-149.166666666667,72">
@@ -3758,7 +3223,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="258.75,252.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="137.916666666667,79.5"
               Start="0,0"
               End="137.916666666667,72">
@@ -3792,7 +3257,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="258.75,150">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,60.5"
               Start="0,0"
               End="0,53">
@@ -3814,7 +3279,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="605.5,150">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,60.5"
               Start="0,0"
               End="0,53">
@@ -3836,7 +3301,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="426.5,374">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,74"
               Start="0,0"
               End="0,66.5">
@@ -3858,7 +3323,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="426.5,490">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,72"
               Start="0,0"
               End="0,64.5">

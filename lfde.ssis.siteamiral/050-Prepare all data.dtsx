@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="050-Prepare all data"
   DTS:PackageType="5"
-  DTS:VersionBuild="101"
-  DTS:VersionGUID="{3DE439F0-0A2C-4BD4-BBF3-8FA3D1AEEDE3}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{FCF8293C-59DF-411E-A62C-95700AA3CCD2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -823,15 +823,6 @@
                       name="fundIndex10YearsPerf"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundIndexVL]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundIndexVL]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundIndexVL]"
-                      name="fundIndexVL"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundYTDPerf]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -949,15 +940,6 @@
                       name="fundPerfAnnualSinceCreate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[partTotalAsset]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[partTotalAsset]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[partTotalAsset]"
-                      name="partTotalAsset"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundLastVL]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -1030,15 +1012,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundMoyIndex10YearsPerf]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundMoyIndex10YearsPerf]"
                       name="fundMoyIndex10YearsPerf"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[MorningStarRatingVolatilite]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[MorningStarRatingVolatilite]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[MorningStarRatingVolatilite]"
-                      name="MorningStarRatingVolatilite"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundMoy1YearsPerf]"
@@ -1143,17 +1116,6 @@
                       name="fundValorizationFrequencyCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundValorizationFrequency]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundValorizationFrequency]"
-                      length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundValorizationFrequency]"
-                      name="fundValorizationFrequency"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundMinimumRecommendedDuration]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -1256,15 +1218,6 @@
                       name="is_principal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsMaitre]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsMaitre]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsMaitre]"
-                      name="IsMaitre"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsNourricier]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -1272,15 +1225,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsNourricier]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsNourricier]"
                       name="IsNourricier"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsFondsNonGereLFDE]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsFondsNonGereLFDE]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsFondsNonGereLFDE]"
-                      name="IsFondsNonGereLFDE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[FundShortName]"
@@ -1338,15 +1282,6 @@
                       name="fundLegal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestUniv]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundInvestUniv]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestUniv]"
-                      name="fundInvestUniv"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestProfil]"
                       codePage="1252"
                       dataType="str"
@@ -1356,39 +1291,6 @@
                       length="50"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestProfil]"
                       name="fundInvestProfil"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundCommissionSurperformance]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundCommissionSurperformance]"
-                      length="250"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundCommissionSurperformance]"
-                      name="fundCommissionSurperformance"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundEnveloppeFiscale]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundEnveloppeFiscale]"
-                      length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundEnveloppeFiscale]"
-                      name="fundEnveloppeFiscale"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundDelegation]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundDelegation]"
-                      length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundDelegation]"
-                      name="fundDelegation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundIndexIsin]"
@@ -1443,17 +1345,6 @@
                       name="isinPortPrincipal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[nmPortPrincipal]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[nmPortPrincipal]"
-                      length="100"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[nmPortPrincipal]"
-                      name="nmPortPrincipal"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundCreationDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -1503,24 +1394,6 @@
                       length="5"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundRiskLevelLabel]"
                       name="fundRiskLevelLabel"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAverageCapi]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAverageCapi]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAverageCapi]"
-                      name="fundAverageCapi"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundActiveShare]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundActiveShare]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundActiveShare]"
-                      name="fundActiveShare"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[SicavDeTete]"
@@ -1642,33 +1515,6 @@
                       name="fundBeta5ans"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha1an]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha1an]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha1an]"
-                      name="fundAlpha1an"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha3ans]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha3ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha3ans]"
-                      name="fundAlpha3ans"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha5ans]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha5ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha5ans]"
-                      name="fundAlpha5ans"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundRatioSharpe1an]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -1723,15 +1569,6 @@
                       name="fundRatioInformation5ans"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1ans]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundTE1ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1ans]"
-                      name="fundTE1ans"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE3ans]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -1750,15 +1587,57 @@
                       name="fundTE5ans"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[Strategy]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[FundRange]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[Strategy]"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[FundRange]"
                       length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[Strategy]"
-                      name="Strategy"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[FundRange]"
+                      name="FundRange"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1an]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundTE1an]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1an]"
+                      name="fundTE1an"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[CommissionSurperformance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[CommissionSurperformance]"
+                      length="250"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[CommissionSurperformance]"
+                      name="CommissionSurperformance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundStrategy]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundStrategy]"
+                      length="50"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundStrategy]"
+                      name="fundStrategy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[EnveloppeFiscale]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[EnveloppeFiscale]"
+                      length="50"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[EnveloppeFiscale]"
+                      name="EnveloppeFiscale"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1775,10 +1654,6 @@
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundIndex10YearsPerf]"
                       dataType="r8"
                       name="fundIndex10YearsPerf" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundIndexVL]"
-                      dataType="r8"
-                      name="fundIndexVL" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundYTDPerf]"
                       dataType="r8"
@@ -1832,10 +1707,6 @@
                       dataType="r8"
                       name="fundPerfAnnualSinceCreate" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[partTotalAsset]"
-                      dataType="r8"
-                      name="partTotalAsset" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundLastVL]"
                       dataType="numeric"
                       name="fundLastVL"
@@ -1869,10 +1740,6 @@
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundMoyIndex10YearsPerf]"
                       dataType="r8"
                       name="fundMoyIndex10YearsPerf" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[MorningStarRatingVolatilite]"
-                      dataType="r8"
-                      name="MorningStarRatingVolatilite" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundMoy1YearsPerf]"
                       dataType="r8"
@@ -1926,12 +1793,6 @@
                       length="50"
                       name="fundValorizationFrequencyCode" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundValorizationFrequency]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundValorizationFrequency" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundMinimumRecommendedDuration]"
                       dataType="i4"
                       name="fundMinimumRecommendedDuration" />
@@ -1984,17 +1845,9 @@
                       dataType="i4"
                       name="is_principal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsMaitre]"
-                      dataType="i4"
-                      name="IsMaitre" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsNourricier]"
                       dataType="i4"
                       name="IsNourricier" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[IsFondsNonGereLFDE]"
-                      dataType="i4"
-                      name="IsFondsNonGereLFDE" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[FundShortName]"
                       codePage="1252"
@@ -2026,33 +1879,11 @@
                       length="50"
                       name="fundLegal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundInvestUniv]"
-                      dataType="i4"
-                      name="fundInvestUniv" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundInvestProfil]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="fundInvestProfil" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundCommissionSurperformance]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="fundCommissionSurperformance" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundEnveloppeFiscale]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundEnveloppeFiscale" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundDelegation]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundDelegation" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundIndexIsin]"
                       codePage="1252"
@@ -2081,12 +1912,6 @@
                       length="100"
                       name="isinPortPrincipal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[nmPortPrincipal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="nmPortPrincipal" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundCreationDate]"
                       dataType="dbTimeStamp"
                       name="fundCreationDate" />
@@ -2112,14 +1937,6 @@
                       dataType="str"
                       length="5"
                       name="fundRiskLevelLabel" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAverageCapi]"
-                      dataType="i4"
-                      name="fundAverageCapi" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundActiveShare]"
-                      dataType="i4"
-                      name="fundActiveShare" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[SicavDeTete]"
                       codePage="1252"
@@ -2175,18 +1992,6 @@
                       dataType="r8"
                       name="fundBeta5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha1an]"
-                      dataType="r8"
-                      name="fundAlpha1an" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha3ans]"
-                      dataType="r8"
-                      name="fundAlpha3ans" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundAlpha5ans]"
-                      dataType="r8"
-                      name="fundAlpha5ans" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundRatioSharpe1an]"
                       dataType="r8"
                       name="fundRatioSharpe1an" />
@@ -2211,10 +2016,6 @@
                       dataType="r8"
                       name="fundRatioInformation5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundTE1ans]"
-                      dataType="r8"
-                      name="fundTE1ans" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundTE3ans]"
                       dataType="r8"
                       name="fundTE3ans" />
@@ -2223,11 +2024,33 @@
                       dataType="r8"
                       name="fundTE5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[Strategy]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[FundRange]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Strategy" />
+                      name="FundRange" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundTE1an]"
+                      dataType="r8"
+                      name="fundTE1an" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[CommissionSurperformance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="CommissionSurperformance" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[fundStrategy]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fundStrategy" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].ExternalColumns[EnveloppeFiscale]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EnveloppeFiscale" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2250,11 +2073,6 @@
                       dataType="r8"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundIndex10YearsPerf]"
                       name="fundIndex10YearsPerf" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundIndexVL]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundIndexVL]"
-                      name="fundIndexVL" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundYTDPerf]"
                       dataType="r8"
@@ -2321,11 +2139,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundPerfAnnualSinceCreate]"
                       name="fundPerfAnnualSinceCreate" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[partTotalAsset]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[partTotalAsset]"
-                      name="partTotalAsset" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundLastVL]"
                       dataType="numeric"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundLastVL]"
@@ -2367,11 +2180,6 @@
                       dataType="r8"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundMoyIndex10YearsPerf]"
                       name="fundMoyIndex10YearsPerf" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[MorningStarRatingVolatilite]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[MorningStarRatingVolatilite]"
-                      name="MorningStarRatingVolatilite" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundMoy1YearsPerf]"
                       dataType="r8"
@@ -2428,21 +2236,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundBeta5ans]"
                       name="fundBeta5ans" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha1an]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha1an]"
-                      name="fundAlpha1an" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha3ans]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha3ans]"
-                      name="fundAlpha3ans" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha5ans]"
-                      dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAlpha5ans]"
-                      name="fundAlpha5ans" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundRatioSharpe1an]"
                       dataType="r8"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundRatioSharpe1an]"
@@ -2473,10 +2266,10 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundRatioInformation5ans]"
                       name="fundRatioInformation5ans" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundTE1ans]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundTE1an]"
                       dataType="r8"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundTE1ans]"
-                      name="fundTE1ans" />
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundTE1an]"
+                      name="fundTE1an" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundTE3ans]"
                       dataType="r8"
@@ -2540,13 +2333,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundValorizationFrequencyCode]"
                       name="fundValorizationFrequencyCode" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundValorizationFrequency]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundValorizationFrequency]"
-                      name="fundValorizationFrequency" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundMinimumRecommendedDuration]"
                       dataType="i4"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundMinimumRecommendedDuration]"
@@ -2609,20 +2395,10 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[is_principal]"
                       name="is_principal" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsMaitre]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsMaitre]"
-                      name="IsMaitre" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsNourricier]"
                       dataType="i4"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsNourricier]"
                       name="IsNourricier" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsFondsNonGereLFDE]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[IsFondsNonGereLFDE]"
-                      name="IsFondsNonGereLFDE" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[FundShortName]"
                       codePage="1252"
@@ -2630,6 +2406,13 @@
                       length="50"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[FundShortName]"
                       name="FundShortName" />
+                    <outputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[FundRange]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[FundRange]"
+                      name="FundRange" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundEstablishment]"
                       codePage="1252"
@@ -2659,11 +2442,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundLegal]"
                       name="fundLegal" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundInvestUniv]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundInvestUniv]"
-                      name="fundInvestUniv" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundInvestProfil]"
                       codePage="1252"
                       dataType="str"
@@ -2671,26 +2449,19 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundInvestProfil]"
                       name="fundInvestProfil" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundCommissionSurperformance]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[CommissionSurperformance]"
                       codePage="1252"
                       dataType="str"
                       length="250"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundCommissionSurperformance]"
-                      name="fundCommissionSurperformance" />
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[CommissionSurperformance]"
+                      name="CommissionSurperformance" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundEnveloppeFiscale]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[EnveloppeFiscale]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundEnveloppeFiscale]"
-                      name="fundEnveloppeFiscale" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundDelegation]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundDelegation]"
-                      name="fundDelegation" />
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[EnveloppeFiscale]"
+                      name="EnveloppeFiscale" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundIndexIsin]"
                       codePage="1252"
@@ -2724,13 +2495,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[isinPortPrincipal]"
                       name="isinPortPrincipal" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[nmPortPrincipal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[nmPortPrincipal]"
-                      name="nmPortPrincipal" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundCreationDate]"
                       dataType="dbTimeStamp"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundCreationDate]"
@@ -2762,16 +2526,6 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundRiskLevelLabel]"
                       name="fundRiskLevelLabel" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAverageCapi]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundAverageCapi]"
-                      name="fundAverageCapi" />
-                    <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundActiveShare]"
-                      dataType="i4"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundActiveShare]"
-                      name="fundActiveShare" />
-                    <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[SicavDeTete]"
                       codePage="1252"
                       dataType="str"
@@ -2794,12 +2548,12 @@
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[DateSicavisation]"
                       name="DateSicavisation" />
                     <outputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[Strategy]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundStrategy]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[Strategy]"
-                      name="Strategy" />
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[fundStrategy]"
+                      name="fundStrategy" />
                     <outputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -2908,12 +2662,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundIndex10YearsPerf]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundIndex10YearsPerf]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundIndexVL]"
-                      cachedDataType="r8"
-                      cachedName="fundIndexVL"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundIndexVL]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundIndexVL]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundYTDPerf]"
                       cachedDataType="r8"
                       cachedName="fundYTDPerf"
@@ -2992,12 +2740,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundPerfAnnualSinceCreate]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundPerfAnnualSinceCreate]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[partTotalAsset]"
-                      cachedDataType="r8"
-                      cachedName="partTotalAsset"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[partTotalAsset]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[partTotalAsset]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundLastVL]"
                       cachedDataType="numeric"
                       cachedName="fundLastVL"
@@ -3047,12 +2789,6 @@
                       cachedName="fundMoyIndex10YearsPerf"
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundMoyIndex10YearsPerf]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundMoyIndex10YearsPerf]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[MorningStarRatingVolatilite]"
-                      cachedDataType="r8"
-                      cachedName="MorningStarRatingVolatilite"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[MorningStarRatingVolatilite]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[MorningStarRatingVolatilite]" />
                     <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundMoy1YearsPerf]"
                       cachedDataType="r8"
@@ -3126,14 +2862,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundValorizationFrequencyCode]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundValorizationFrequencyCode]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundValorizationFrequency]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="fundValorizationFrequency"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundValorizationFrequency]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundValorizationFrequency]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundMinimumRecommendedDuration]"
                       cachedDataType="i4"
                       cachedName="fundMinimumRecommendedDuration"
@@ -3206,23 +2934,11 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[is_principal]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[is_principal]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[IsMaitre]"
-                      cachedDataType="i4"
-                      cachedName="IsMaitre"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsMaitre]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsMaitre]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[IsNourricier]"
                       cachedDataType="i4"
                       cachedName="IsNourricier"
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsNourricier]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsNourricier]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[IsFondsNonGereLFDE]"
-                      cachedDataType="i4"
-                      cachedName="IsFondsNonGereLFDE"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsFondsNonGereLFDE]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[IsFondsNonGereLFDE]" />
                     <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[FundShortName]"
                       cachedCodepage="1252"
@@ -3264,12 +2980,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundLegal]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundLegal]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundInvestUniv]"
-                      cachedDataType="i4"
-                      cachedName="fundInvestUniv"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundInvestUniv]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestUniv]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundInvestProfil]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3277,30 +2987,6 @@
                       cachedName="fundInvestProfil"
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundInvestProfil]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundInvestProfil]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundCommissionSurperformance]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="fundCommissionSurperformance"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundCommissionSurperformance]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundCommissionSurperformance]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundEnveloppeFiscale]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="fundEnveloppeFiscale"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundEnveloppeFiscale]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundEnveloppeFiscale]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundDelegation]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="fundDelegation"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundDelegation]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundDelegation]" />
                     <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundIndexIsin]"
                       cachedCodepage="1252"
@@ -3339,14 +3025,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[isinPortPrincipal]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[isinPortPrincipal]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[nmPortPrincipal]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="nmPortPrincipal"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[nmPortPrincipal]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[nmPortPrincipal]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundCreationDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="fundCreationDate"
@@ -3383,18 +3061,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundRiskLevelLabel]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundRiskLevelLabel]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundAverageCapi]"
-                      cachedDataType="i4"
-                      cachedName="fundAverageCapi"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAverageCapi]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAverageCapi]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundActiveShare]"
-                      cachedDataType="i4"
-                      cachedName="fundActiveShare"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundActiveShare]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundActiveShare]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[SicavDeTete]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -3420,12 +3086,6 @@
                       cachedName="DateSicavisation"
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[DateSicavisation]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[DateSicavisation]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[Audit_CreationDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Audit_CreationDate"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[Audit_CreationDate]"
-                      lineageId="Package\DFT - STG_T_PART\DC - Audit CreationDate.Outputs[Sortie de colonne dérivée].Columns[Audit_CreationDate]" />
                     <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundVolatiliteVL1an]"
                       cachedDataType="r8"
@@ -3481,24 +3141,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundBeta5ans]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundBeta5ans]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundAlpha1an]"
-                      cachedDataType="r8"
-                      cachedName="fundAlpha1an"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha1an]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha1an]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundAlpha3ans]"
-                      cachedDataType="r8"
-                      cachedName="fundAlpha3ans"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha3ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha3ans]" />
-                    <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundAlpha5ans]"
-                      cachedDataType="r8"
-                      cachedName="fundAlpha5ans"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha5ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundAlpha5ans]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundRatioSharpe1an]"
                       cachedDataType="r8"
                       cachedName="fundRatioSharpe1an"
@@ -3535,12 +3177,6 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundRatioInformation5ans]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundRatioInformation5ans]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundTE1ans]"
-                      cachedDataType="r8"
-                      cachedName="fundTE1ans"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE1ans]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1ans]" />
-                    <inputColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundTE3ans]"
                       cachedDataType="r8"
                       cachedName="fundTE3ans"
@@ -3553,13 +3189,49 @@
                       externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE5ans]"
                       lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE5ans]" />
                     <inputColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[Strategy]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[FundRange]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Strategy"
-                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[Strategy]"
-                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[Strategy]" />
+                      cachedName="FundRange"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[FundRange]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[FundRange]" />
+                    <inputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundTE1an]"
+                      cachedDataType="r8"
+                      cachedName="fundTE1an"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE1an]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundTE1an]" />
+                    <inputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[CommissionSurperformance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="CommissionSurperformance"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[CommissionSurperformance]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[CommissionSurperformance]" />
+                    <inputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[fundStrategy]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fundStrategy"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundStrategy]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[fundStrategy]" />
+                    <inputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[EnveloppeFiscale]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EnveloppeFiscale"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[EnveloppeFiscale]"
+                      lineageId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite - PS_LFDECOM_GetAllData.Outputs[Sortie de source OLE DB].Columns[EnveloppeFiscale]" />
+                    <inputColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].Columns[Audit_CreationDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Audit_CreationDate"
+                      externalMetadataColumnId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[Audit_CreationDate]"
+                      lineageId="Package\DFT - STG_T_PART\DC - Audit CreationDate.Outputs[Sortie de colonne dérivée].Columns[Audit_CreationDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3575,10 +3247,6 @@
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundIndex10YearsPerf]"
                       dataType="r8"
                       name="fundIndex10YearsPerf" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundIndexVL]"
-                      dataType="r8"
-                      name="fundIndexVL" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundYTDPerf]"
                       dataType="r8"
@@ -3632,10 +3300,6 @@
                       dataType="r8"
                       name="fundPerfAnnualSinceCreate" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[partTotalAsset]"
-                      dataType="r8"
-                      name="partTotalAsset" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundLastVL]"
                       dataType="numeric"
                       name="fundLastVL"
@@ -3669,10 +3333,6 @@
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundMoyIndex10YearsPerf]"
                       dataType="r8"
                       name="fundMoyIndex10YearsPerf" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[MorningStarRatingVolatilite]"
-                      dataType="r8"
-                      name="MorningStarRatingVolatilite" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundMoy1YearsPerf]"
                       dataType="r8"
@@ -3726,12 +3386,6 @@
                       length="50"
                       name="fundValorizationFrequencyCode" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundValorizationFrequency]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundValorizationFrequency" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundMinimumRecommendedDuration]"
                       dataType="i4"
                       name="fundMinimumRecommendedDuration" />
@@ -3784,17 +3438,9 @@
                       dataType="i4"
                       name="is_principal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsMaitre]"
-                      dataType="i4"
-                      name="IsMaitre" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsNourricier]"
                       dataType="i4"
                       name="IsNourricier" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[IsFondsNonGereLFDE]"
-                      dataType="i4"
-                      name="IsFondsNonGereLFDE" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[FundShortName]"
                       codePage="1252"
@@ -3826,33 +3472,11 @@
                       length="50"
                       name="fundLegal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundInvestUniv]"
-                      dataType="i4"
-                      name="fundInvestUniv" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundInvestProfil]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="fundInvestProfil" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundCommissionSurperformance]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="fundCommissionSurperformance" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundEnveloppeFiscale]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundEnveloppeFiscale" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundDelegation]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="fundDelegation" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundIndexIsin]"
                       codePage="1252"
@@ -3881,12 +3505,6 @@
                       length="100"
                       name="isinPortPrincipal" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[nmPortPrincipal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="nmPortPrincipal" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundCreationDate]"
                       dataType="dbTimeStamp"
                       name="fundCreationDate" />
@@ -3912,18 +3530,6 @@
                       dataType="str"
                       length="5"
                       name="fundRiskLevelLabel" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAverageCapi]"
-                      dataType="numeric"
-                      name="fundAverageCapi"
-                      precision="38"
-                      scale="2" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundActiveShare]"
-                      dataType="numeric"
-                      name="fundActiveShare"
-                      precision="38"
-                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[SicavDeTete]"
                       codePage="1252"
@@ -3983,18 +3589,6 @@
                       dataType="r8"
                       name="fundBeta5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha1an]"
-                      dataType="r8"
-                      name="fundAlpha1an" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha3ans]"
-                      dataType="r8"
-                      name="fundAlpha3ans" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundAlpha5ans]"
-                      dataType="r8"
-                      name="fundAlpha5ans" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundRatioSharpe1an]"
                       dataType="r8"
                       name="fundRatioSharpe1an" />
@@ -4019,10 +3613,6 @@
                       dataType="r8"
                       name="fundRatioInformation5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE1ans]"
-                      dataType="r8"
-                      name="fundTE1ans" />
-                    <externalMetadataColumn
                       refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE3ans]"
                       dataType="r8"
                       name="fundTE3ans" />
@@ -4031,11 +3621,33 @@
                       dataType="r8"
                       name="fundTE5ans" />
                     <externalMetadataColumn
-                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[Strategy]"
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[FundRange]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Strategy" />
+                      name="FundRange" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundTE1an]"
+                      dataType="r8"
+                      name="fundTE1an" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[CommissionSurperformance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="CommissionSurperformance" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[fundStrategy]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fundStrategy" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART.Inputs[Entrée de destination OLE DB].ExternalColumns[EnveloppeFiscale]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EnveloppeFiscale" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4383,7 +3995,7 @@ ORDER BY s1.Valuation_Date DESC;</property>
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="TS - Send HistoVL File via DeliveryHub"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -4392,6 +4004,15 @@ ORDER BY s1.Valuation_Date DESC;</property>
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadOnlyVariables="User::DeliveryHub_Amazon_S3_Endpoint,User::ISIN_HistoVL,User::Path_S3,$Project::Repertoire_TMP_FichiersAmazon">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="ST_29648a2b67ee4339a7dc13928f237c99.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4598,35 +4219,6 @@ ORDER BY s1.Valuation_Date DESC;</property>
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_29648a2b67ee4339a7dc13928f237c99.Properties.Settings.get_Default():ST_29648a2b67ee4339a7dc13928f237c99.Properties.Sett" +
-    "ings")]
-
-namespace ST_29648a2b67ee4339a7dc13928f237c99.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
 /* The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -4812,6 +4404,35 @@ namespace ST_29648a2b67ee4339a7dc13928f237c99
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_29648a2b67ee4339a7dc13928f237c99.Properties.Settings.get_Default():ST_29648a2b67ee4339a7dc13928f237c99.Properties.Sett" +
+    "ings")]
+
+namespace ST_29648a2b67ee4339a7dc13928f237c99.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -4841,15 +4462,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -5693,7 +5305,7 @@ ORDER BY
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="TS - Send File Indices GP"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -5702,6 +5314,15 @@ ORDER BY
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadOnlyVariables="User::DeliveryHub_Amazon_S3_Endpoint,User::ISIN_HistoVL,User::Path_S3_IndicesGP,$Project::Repertoire_TMP_FichiersAmazon">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -5824,35 +5445,6 @@ ORDER BY
               <ProjectItem
                 Name="ST_48745f4b9a94445782106896a0270b06.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{65abccf1-c1dd-41d5-87b8-2579254ef006}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a</RootNamespace><AssemblyName>ST_48745f4b9a94445782106896a0270b06</AssemblyName><TargetFrameworkVersion>v4.0</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Settings.get_Default():ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Sett" +
-    "ings")]
-
-namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -6039,6 +5631,35 @@ namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Settings.get_Default():ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Sett" +
+    "ings")]
+
+namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -6068,15 +5689,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -6304,7 +5916,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TS - Send File Simulator"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -6313,6 +5925,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadOnlyVariables="User::DeliveryHub_Amazon_S3_Endpoint,User::ISIN_HistoVL,User::Path_S3,$Project::Repertoire_TMP_FichiersAmazon">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -6519,35 +6140,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Settings.get_Default():ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Sett" +
-    "ings")]
-
-namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-          <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
 /* The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -6733,6 +6325,35 @@ namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Settings.get_Default():ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties.Sett" +
+    "ings")]
+
+namespace ST_36b44b259b8e4cc4ae5b3a2d74ab6d6a.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -6762,15 +6383,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -6986,7 +6598,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TSQL - Get List Fonds STG_HistoVL"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7037,6 +6649,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
       DTS:DTSID="{3BAAA802-6199-45F6-9F58-E9D93377B694}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[$Project::LaunchType] == &quot;INTRADAY&quot;"
       DTS:From="Package\DFT - STG_T_PART"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
@@ -7053,7 +6667,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="226,42"
           Id="Package\DFT - Load CSV Simulator Data"
@@ -7263,7 +6877,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="166.916666666666,55.8980301274623,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7335,28 +6951,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\DFT - STG_T_PART\OLE - DB_StagingAmiralSite STG_T_PART"
           TopLeft="305,248" />
         <EdgeLayout
-          Id="Package\DFT - STG_T_PART.Paths[Sortie de source OLE DB]"
-          TopLeft="442.5,89">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DFT - STG_T_PART.Paths[Sortie de colonne dérivée]"
           TopLeft="441.5,181">
           <EdgeLayout.Curve>
@@ -7370,6 +6964,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - STG_T_PART.Paths[Sortie de source OLE DB]"
+          TopLeft="442.5,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7454,7 +7070,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\SC - Indice GP - FULL Only\DFT - Load CSV Indices GP Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="211,42"
           Id="Package\SC - Indice GP - FULL Only\DFT - Load CSV Indices GP Data\FFD - Create Indices GP File"
@@ -7486,7 +7102,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7508,7 +7126,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

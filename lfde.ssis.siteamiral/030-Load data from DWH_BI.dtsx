@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="030-Load data from DWH_BI"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{7BAF7862-0F7D-4CB5-99F7-D2E489D22E03}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{2D6B8B0A-8C5B-43FA-85A8-093704EE7754}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -415,6 +415,14 @@
                       cachedName="Strategie"
                       externalMetadataColumnId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[Strategie]"
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[Strategie]" />
+                    <inputColumn
+                      refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].Columns[GammeFonds]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GammeFonds"
+                      externalMetadataColumnId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[GammeFonds]"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[GammeFonds]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -646,6 +654,12 @@
                       dataType="str"
                       length="50"
                       name="Strategie" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimPart\OLE - DB_StagingAmiralSite STG_DimPart.Inputs[Entrée de destination OLE DB].ExternalColumns[GammeFonds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GammeFonds" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1173,6 +1187,17 @@
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[Strategie]"
                       name="Strategie"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[GammeFonds]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].ExternalColumns[GammeFonds]"
+                      length="50"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].Columns[GammeFonds]"
+                      name="GammeFonds"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1404,6 +1429,12 @@
                       dataType="str"
                       length="50"
                       name="Strategie" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie de source OLE DB].ExternalColumns[GammeFonds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GammeFonds" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1451,6 +1482,13 @@
                       length="50"
                       lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[LibelleCourtFonds]"
                       name="LibelleCourtFonds" />
+                    <outputColumn
+                      refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[GammeFonds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[GammeFonds]"
+                      name="GammeFonds" />
                     <outputColumn
                       refId="Package\DFT - DimPart\OLE - DWH_BI - PS_ALIM_STG_DimPart.Outputs[Sortie d'erreur de source OLE DB].Columns[TypeFonds]"
                       codePage="1252"
@@ -3324,7 +3362,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[STG_DimPart];&#xA;TRUNCATE TABLE [dbo].[STG_FactVL];&#xA;TRUNCATE TABLE [dbo].[STG_PartAndIndex];&#xA;TRUNCATE TABLE [dbo].[STG_HistoVL];&#xA;TRUNCATE TABLE [dbo].[STG_Manager];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[STG_DimPart];&#xA;TRUNCATE TABLE [dbo].[STG_FactVL];&#xA;TRUNCATE TABLE [dbo].[STG_PartAndIndex];&#xA;TRUNCATE TABLE [dbo].[STG_HistoVL];&#xA;TRUNCATE TABLE [dbo].[STG_Manager];&#xA;TRUNCATE TABLE [dbo].[STG_T_PART];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -3582,7 +3620,7 @@
     design-time-name="Package\DFT - FactVL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="263,42"
           Id="Package\DFT - FactVL\OLE - DWH_BI - PS_ALIM_STG_FactVL"
@@ -3596,7 +3634,7 @@
           TopLeft="484.75,89">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,122"
               Start="0,0"
               End="0,114.5">
@@ -3610,7 +3648,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3641,7 +3681,7 @@
     design-time-name="Package\DFT - Info Gérants">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="272,42"
           Id="Package\DFT - Info Gérants\OLE - DWH_BI - PS_ALIM_STG_Manager"
@@ -3655,7 +3695,7 @@
           TopLeft="437.25,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,94"
               Start="0,0"
               End="0,86.5">
@@ -3669,7 +3709,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3700,7 +3742,7 @@
     design-time-name="Package\DFT - Part and Index">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="303,42"
           Id="Package\DFT - Part and Index\OLE - DB_StagingAmiralSite STG_PartAndIndex"
@@ -3714,7 +3756,7 @@
           TopLeft="413,135">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,108"
               Start="0,0"
               End="0,100.5">
@@ -3728,7 +3770,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3759,7 +3803,7 @@
     design-time-name="Package\DFT - VL Histo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="267,42"
           Id="Package\DFT - VL Histo\OLE - DWH_BI - PS_ALIM_STG_HistoVL"
@@ -3773,7 +3817,7 @@
           TopLeft="389.75,74">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,64"
               Start="0,0"
               End="0,56.5">
@@ -3787,7 +3831,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
