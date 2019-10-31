@@ -8,6 +8,7 @@
     DTS:Name="ConnectionString">@[$Project::ECHIQVERTDB_REPORTINGS_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
+      DTS:Retain="True"
       DTS:ConnectionString="Data Source=ECHIQVERT;Initial Catalog=DB_REPORTINGS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

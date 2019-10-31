@@ -10,7 +10,7 @@
     <MySqlConnectionManager>
       <ConnectionString>User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;Default Command Timeout=3000;Connection Timeout=3000;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES</ConnectionString>
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAABAYtf24CFFDK71UuUmXPd3AAAAAASAAACgAAAAEAAAAAuu4ttAfc2saZODS8i0YMwwAAAATM7bP5RKqhbQ/k5gTEtIxwEuwiLM5I7iPDY3W2p1+le6NmJgNNY/azZfc6E+r6c6FAAAAIOg0yClAH+tYqOVkajr2PXyxYiR</Password>
+        Sensitive="1"></Password>
     </MySqlConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

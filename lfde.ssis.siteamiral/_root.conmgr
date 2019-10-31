@@ -12,7 +12,7 @@
       DTS:ConnectionString="User Id=root;Host=localhost;Port=3313;Database=finechiquier;Persist Security Info=True;default command timeout=3000;connection timeout=3000;Sql Modes=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,ANSI_QUOTES;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuvy5+L8fV0i3jkfU4Y+MugAAAAACAAAAAAADZgAAwAAAABAAAAAE3Hhm9GDAr8DJDtBTy5ZVAAAAAASAAACgAAAAEAAAADNyKR2mABAwhQ/kDIBsplF4AAAAf+UHYsfSqq3EymnPKHHx4+gaUdgqd6ens77tkX7V2nrFZs69XcDBUYGf+InkInbT9XGU2Y8gW4Uzq3U9yH7F/NLS39KyYdtoEIpRK93cJhpnjLfiqBVHAmsWQ0myL4iWxsc6cvQV4HbXO0vuUZPiSXl2xjfSUOc+FAAAAKi+ReEWoJNubh+7Zoj1slko2Z40</DTS:Password>
+        Sensitive="1"></DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

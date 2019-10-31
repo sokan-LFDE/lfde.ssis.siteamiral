@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="010-Load Indicateur de Risque"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{8283F17D-E001-4D45-A500-223913C61043}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{7FD4CEC6-1F70-4A5D-9865-85902B44E215}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -3091,7 +3092,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="211,42"
           Id="Package\DFT - Indicateurs de Risque"
@@ -3109,7 +3110,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="579.5,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,71"
               Start="0,0"
               End="0,63.5">
@@ -3131,7 +3132,7 @@ ORDER BY Part[Libelle Part]</property>
           TopLeft="578,295">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,80.5"
               Start="0,0"
               End="0,73">
@@ -3359,6 +3360,14 @@ ORDER BY Part[Libelle Part]</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque">
     <Properties>
       <Property>
@@ -3376,14 +3385,6 @@ ORDER BY Part[Libelle Part]</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - Indicateurs de Risque\OLE - SSAS - Indicateur de Risque Last Friday">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

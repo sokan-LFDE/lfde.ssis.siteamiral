@@ -8,6 +8,7 @@
     DTS:Name="ConnectionString">@[$Project::ECHIQCUBE01Financiere_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
+      DTS:Retain="True"
       DTS:ConnectionString="Data Source=ECHIQCUBE01;Initial Catalog=Financiere;Provider=MSOLAP.8;Integrated Security=SSPI;Location=ECHIQCUBE01;Extended Properties=&quot;Format=Tabular;&quot;;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

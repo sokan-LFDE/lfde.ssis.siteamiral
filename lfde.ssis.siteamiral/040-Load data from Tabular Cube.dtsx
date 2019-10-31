@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="040-Load data from Tabular Cube"
   DTS:PackageType="5"
-  DTS:VersionBuild="103"
-  DTS:VersionGUID="{27141E15-83D3-4C7D-BD5A-BECDBE5A5974}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{28A17E49-93C7-48B2-B012-271409C1E6B6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -5824,6 +5825,778 @@ ORDER BY Part[Libelle Part]</property>
               endId="Package\DFT - Performance VL\OLE - DB_StagingAmiralSite STG_CubeFactVL.Inputs[Entrée de destination OLE DB]"
               name="Unir tout sortie 1"
               startId="Package\DFT - Performance VL\Join Quotidien et Hebdo.Outputs[Unir tout sortie 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\risque quoti"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:Disabled="True"
+      DTS:DTSID="{43794D75-4C93-4400-ADFE-1C78BF4C70CA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="risque quoti"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\risque quoti\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Staging_Indicateur_de_Risque]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\risque quoti\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{DB4F192E-E9BF-470F-AD2F-30D5F6BD2FCC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQBIVM.DB_StagingAmiralSite]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite VL 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite VL 52semaines"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL1an]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 52semaines]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite VL 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite VL 3ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL3ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 3ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite VL 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite VL 5ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL5ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 5ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite Indice 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite Indice 52semaines"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice1an]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 52semaines]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite Indice 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite Indice 3ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice3ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 3ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Volatilite Indice 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Volatilite Indice 5ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice5ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 5ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Beta 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Beta 3ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta3ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 3ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Beta 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Beta 52semaines"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta1an]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 52semaines]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Beta 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Beta 5ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta5ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 5ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Sharpe 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Sharpe 52semaines"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe1an]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 52semaines]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Sharpe 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Sharpe 3ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe3ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 3ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Sharpe 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Sharpe 5ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe5ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 5ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Information 52semaines]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Information 52semaines"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation1an]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 52semaines]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Information 3ans]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Information 3ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation3ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 3ans]" />
+                    <inputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ratio Information 5ans]"
+                      cachedDataType="r8"
+                      cachedName="Ratio Information 5ans"
+                      externalMetadataColumnId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation5ans]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 5ans]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Code ISIN Part]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Code ISIN Part" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteVL3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteVL1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteVL5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteVL5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteIndice1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteIndice3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[VolatiliteIndice5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VolatiliteIndice5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Beta1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Beta3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Beta5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Beta5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Alpha1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Alpha1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Alpha3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Alpha3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Alpha5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Alpha5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioSharpe1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioSharpe3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioSharpe5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioSharpe5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation1an]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioInformation1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation3ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioInformation3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RatioInformation5ans]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RatioInformation5ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi1an]"
+                      dataType="r8"
+                      name="EcartDeSuivi1an" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi3ans]"
+                      dataType="r8"
+                      name="EcartDeSuivi3ans" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EcartDeSuivi5ans]"
+                      dataType="r8"
+                      name="EcartDeSuivi5ans" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\risque quoti\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\risque quoti\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\risque quoti\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\risque quoti\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\risque quoti\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable">User::DAX_REQ_Get_IndicateurRisque_Quoti</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\risque quoti\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{1125897C-2907-41F9-8737-54D629977F62}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ECHIQCUBE01.Financiere]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Code ISIN Fonds]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Fonds]]"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Code ISIN Fonds]"
+                      name="Code ISIN Fonds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Code ISIN Part]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Part]]"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Code ISIN Part]"
+                      name="Code ISIN Part"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Libelle Part]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Libelle Part]]"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Libelle Part]"
+                      name="Libelle Part"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 52semaines]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 52semaines]"
+                      name="Volatilite VL 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 3ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 3ans]"
+                      name="Volatilite VL 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 5ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite VL 5ans]"
+                      name="Volatilite VL 5ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 52semaines]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 52semaines]"
+                      name="Volatilite Indice 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 3ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 3ans]"
+                      name="Volatilite Indice 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 5ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Volatilite Indice 5ans]"
+                      name="Volatilite Indice 5ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 3ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 3ans]"
+                      name="Beta 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 52semaines]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 52semaines]"
+                      name="Beta 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 5ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Beta 5ans]"
+                      name="Beta 5ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 52semaines]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 52semaines]"
+                      name="Ratio Sharpe 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 3ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 3ans]"
+                      name="Ratio Sharpe 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 5ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Sharpe 5ans]"
+                      name="Ratio Sharpe 5ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 52semaines]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 52semaines]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 52semaines]"
+                      name="Ratio Information 52semaines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 3ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 3ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 3ans]"
+                      name="Ratio Information 3ans"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 5ans]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 5ans]]"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Ratio Information 5ans]"
+                      name="Ratio Information 5ans"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Fonds]]"
+                      dataType="wstr"
+                      length="255"
+                      name="Part[Code ISIN Fonds]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Code ISIN Part]]"
+                      dataType="wstr"
+                      length="255"
+                      name="Part[Code ISIN Part]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Part[Libelle Part]]"
+                      dataType="wstr"
+                      length="255"
+                      name="Part[Libelle Part]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 52semaines]]"
+                      dataType="r8"
+                      name="[Volatilite VL 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 3ans]]"
+                      dataType="r8"
+                      name="[Volatilite VL 3ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite VL 5ans]]"
+                      dataType="r8"
+                      name="[Volatilite VL 5ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 52semaines]]"
+                      dataType="r8"
+                      name="[Volatilite Indice 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 3ans]]"
+                      dataType="r8"
+                      name="[Volatilite Indice 3ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Volatilite Indice 5ans]]"
+                      dataType="r8"
+                      name="[Volatilite Indice 5ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 3ans]]"
+                      dataType="r8"
+                      name="[Beta 3ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 52semaines]]"
+                      dataType="r8"
+                      name="[Beta 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Beta 5ans]]"
+                      dataType="r8"
+                      name="[Beta 5ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 52semaines]]"
+                      dataType="r8"
+                      name="[Ratio Sharpe 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 3ans]]"
+                      dataType="r8"
+                      name="[Ratio Sharpe 3ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Sharpe 5ans]]"
+                      dataType="r8"
+                      name="[Ratio Sharpe 5ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 52semaines]]"
+                      dataType="r8"
+                      name="[Ratio Information 52semaines]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 3ans]]"
+                      dataType="r8"
+                      name="[Ratio Information 3ans]" />
+                    <externalMetadataColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[[Ratio Information 5ans]]"
+                      dataType="r8"
+                      name="[Ratio Information 5ans]" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Fonds]]"
+                      name="Part[Code ISIN Fonds]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Part]]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Code ISIN Part]]"
+                      name="Part[Code ISIN Part]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Libelle Part]]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Part[Libelle Part]]"
+                      name="Part[Libelle Part]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 52semaines]]"
+                      name="[Volatilite VL 52semaines]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 3ans]]"
+                      name="[Volatilite VL 3ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite VL 5ans]]"
+                      name="[Volatilite VL 5ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 52semaines]]"
+                      name="[Volatilite Indice 52semaines]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 3ans]]"
+                      name="[Volatilite Indice 3ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Volatilite Indice 5ans]]"
+                      name="[Volatilite Indice 5ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 3ans]]"
+                      name="[Beta 3ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 52semaines]]"
+                      name="[Beta 52semaines]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Beta 5ans]]"
+                      name="[Beta 5ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 52semaines]]"
+                      name="[Ratio Sharpe 52semaines]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 3ans]]"
+                      name="[Ratio Sharpe 3ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Sharpe 5ans]]"
+                      name="[Ratio Sharpe 5ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 52semaines]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 52semaines]]"
+                      name="[Ratio Information 52semaines]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 3ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 3ans]]"
+                      name="[Ratio Information 3ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 5ans]]"
+                      dataType="r8"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[[Ratio Information 5ans]]"
+                      name="[Ratio Information 5ans]" />
+                    <outputColumn
+                      refId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\risque quoti\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\risque quoti.Paths[Sortie de source OLE DB]"
+              endId="Package\risque quoti\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source OLE DB"
+              startId="Package\risque quoti\Source OLE DB.Outputs[Sortie de source OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -12619,7 +13392,8 @@ ORDER BY Part[Libelle Part]</property>
                   contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
                   description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
                   name="DC - DateAdd"
-                  usesDispositions="true">
+                  usesDispositions="true"
+                  validateExternalMetadata="False">
                   <inputs>
                     <input
                       refId="Package\SC - Fonds Quotidiens\DFT - Indicateurs de Risque - Quotidien\DC - DateAdd.Inputs[Entrée de colonne dérivée]"
@@ -12725,6 +13499,7 @@ ORDER BY Part[Libelle Part]</property>
                   contactInfo="Jointure de fusion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
                   description="Combine deux flux de données triés en un seul à l'aide de la jointure FULL, LEFT ou INNER. Nous recommandons cette transformation lorsque les flux de données peuvent être triés au niveau de leurs sources."
                   name="Merge Join Alpha 1 3 5"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -13208,6 +13983,7 @@ ORDER BY Part[Libelle Part]</property>
                   description="Destination OLE DB"
                   name="OLE - DB_StagingAmiralSite STG_IndicateursDeRisque"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -14437,6 +15213,7 @@ ORDER BY Part[Libelle Part]</property>
                   contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
                   description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
                   name="Trier ISIN"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -14973,6 +15750,7 @@ ORDER BY Part[Libelle Part]</property>
                   contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
                   description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
                   name="Trier ISIN vendredi"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -15268,6 +16046,7 @@ ORDER BY Part[Libelle Part]</property>
                   description="Destination OLE DB"
                   name="OLE - DB_StagingAmiralSite STG_CubeFactIndices"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -15535,6 +16314,7 @@ ORDER BY Part[Libelle Part]</property>
                   description="Source OLE DB"
                   name="OLE - SSAS - Performance Indices"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="7">
                   <properties>
                     <property
@@ -15963,6 +16743,7 @@ ORDER BY Part[Libelle Part]</property>
                   description="Destination OLE DB"
                   name="OLE - DB_StagingAmiralSite STG_CubeFactVL"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -16240,6 +17021,7 @@ ORDER BY Part[Libelle Part]</property>
                   description="Source OLE DB"
                   name="OLE - SSAS - Performance VL"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="7">
                   <properties>
                     <property
@@ -16812,6 +17594,195 @@ ORDER BY Part[Libelle Part]</property>
           Id="Package\DFT - Performance VL"
           TopLeft="19.5000000000001,773.5" />
         <NodeLayout
+          Size="267,42"
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception"
+          TopLeft="11,209.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SC - Exceptions\DFT - Performance VL - Exception"
+          TopLeft="19.5,107.5" />
+        <EdgeLayout
+          Id="Package\SC - Exceptions.PrecedenceConstraints[Constraint]"
+          TopLeft="139,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Exceptions.PrecedenceConstraints[Constraint 1]"
+          TopLeft="139,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="278,307"
+          Size="278,350"
+          Id="Package\SC - Exceptions"
+          TopLeft="277,1029.5" />
+        <NodeLayout
+          Size="289,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="279,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire"
+          TopLeft="10.5,209.5" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire"
+          TopLeft="19,107.5" />
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo.PrecedenceConstraints[Constraint]"
+          TopLeft="150,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo.PrecedenceConstraints[Constraint 1]"
+          TopLeft="150,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="300,307"
+          Size="300,350"
+          Id="Package\SC - Fonds Hebdo"
+          TopLeft="266,619.5" />
+        <NodeLayout
+          Size="266,42"
+          Id="Package\SC - Fonds Quotidiens\DFT - Indicateurs de Risque - Quotidien"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien"
+          TopLeft="10.5,209.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien"
+          TopLeft="19,107.5" />
+        <EdgeLayout
+          Id="Package\SC - Fonds Quotidiens.PrecedenceConstraints[Constraint]"
+          TopLeft="138.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Quotidiens.PrecedenceConstraints[Constraint 1]"
+          TopLeft="138.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="277,307"
+          Size="277,350"
+          Id="Package\SC - Fonds Quotidiens"
+          TopLeft="277.5,209.5" />
+        <NodeLayout
           Size="213,42"
           Id="Package\SQL - Get last date available"
           TopLeft="309.5,5.5" />
@@ -16863,251 +17834,6 @@ ORDER BY Part[Libelle Part]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Contrainte]"
-          TopLeft="416,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Contrainte 2]"
-          TopLeft="382,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-271,214"
-              Start="0,0"
-              End="-271,206.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,82.561797752809" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,82.561797752809"
-                    Point2="0,86.561797752809"
-                    Point3="-4,86.561797752809" />
-                  <mssgle:LineSegment
-                    End="-267,86.561797752809" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-267,86.561797752809"
-                    Point2="-271,86.561797752809"
-                    Point3="-271,90.561797752809" />
-                  <mssgle:LineSegment
-                    End="-271,206.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="266,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Indicateurs de Risque - Quotidien"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien"
-          TopLeft="19,107.5" />
-        <NodeLayout
-          Size="256,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien"
-          TopLeft="10.5,209.5" />
-        <EdgeLayout
-          Id="Package\SC - Fonds Quotidiens.PrecedenceConstraints[Constraint]"
-          TopLeft="138.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Quotidiens.PrecedenceConstraints[Constraint 1]"
-          TopLeft="138.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="277,306"
-          Size="277,350"
-          Id="Package\SC - Fonds Quotidiens"
-          TopLeft="277.5,209.5" />
-        <NodeLayout
-          Size="279,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire"
-          TopLeft="10.5,209.5" />
-        <NodeLayout
-          Size="262,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire"
-          TopLeft="19,107.5" />
-        <NodeLayout
-          Size="289,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire"
-          TopLeft="5.5,5.5" />
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo.PrecedenceConstraints[Constraint]"
-          TopLeft="150,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo.PrecedenceConstraints[Constraint 1]"
-          TopLeft="150,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="300,306"
-          Size="300,350"
-          Id="Package\SC - Fonds Hebdo"
-          TopLeft="266,619.5" />
-        <NodeLayout
-          Size="267,42"
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\SC - Exceptions\DFT - Performance VL - Exception"
-          TopLeft="19.5,107.5" />
-        <NodeLayout
-          Size="256,42"
-          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception"
-          TopLeft="11,209.5" />
-        <EdgeLayout
-          Id="Package\SC - Exceptions.PrecedenceConstraints[Constraint]"
-          TopLeft="139,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Exceptions.PrecedenceConstraints[Constraint 1]"
-          TopLeft="139,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="278,306"
-          Size="278,350"
-          Id="Package\SC - Exceptions"
-          TopLeft="277,1029.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="416,559.5">
@@ -17186,6 +17912,66 @@ ORDER BY Part[Libelle Part]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="416,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 2]"
+          TopLeft="382,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-271,214"
+              Start="0,0"
+              End="-271,206.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.561797752809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82.561797752809"
+                    Point2="0,86.561797752809"
+                    Point3="-4,86.561797752809" />
+                  <mssgle:LineSegment
+                    End="-267,86.561797752809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-267,86.561797752809"
+                    Point2="-271,86.561797752809"
+                    Point3="-271,90.561797752809" />
+                  <mssgle:LineSegment
+                    End="-271,206.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="134,42"
+          Id="Package\risque quoti"
+          TopLeft="813,227" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -17429,7 +18215,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package\DFT - Performance Indice">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="239,42"
           Id="Package\DFT - Performance Indice\OLE - SSAS - Performance Indices"
@@ -17457,7 +18243,9 @@ ORDER BY Part[Libelle Part]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17488,7 +18276,7 @@ ORDER BY Part[Libelle Part]</property>
     design-time-name="Package\DFT - Performance VL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="294,42"
           Id="Package\DFT - Performance VL\OLE - DB_StagingAmiralSite STG_CubeFactVL"
@@ -17536,7 +18324,9 @@ ORDER BY Part[Libelle Part]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17558,7 +18348,9 @@ ORDER BY Part[Libelle Part]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17592,7 +18384,9 @@ ORDER BY Part[Libelle Part]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17621,6 +18415,501 @@ ORDER BY Part[Libelle Part]</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT - Performance VL\OLE - SSAS - Performance VL Last Friday">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\DC - DateAdd"
+          TopLeft="124,107.5" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLE - SSAS - Indicateur de Risque"
+          TopLeft="75.5,5.5" />
+        <NodeLayout
+          Size="380,42"
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLEDB Command - Update STG_IndicateursDeRisque Exception"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception.Paths[Sortie de source OLE DB]"
+          TopLeft="195.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception.Paths[Sortie de colonne dérivée]"
+          TopLeft="195.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLE - SSAS - Indicateur de Risque">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Exceptions\DFT - Performance Indice - Exception">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="312,42"
+          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLEDB Command - Update STG_CubeFactIndices"
+          TopLeft="215,241" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLE - SSAS - Performance Indices"
+          TopLeft="244,91" />
+        <EdgeLayout
+          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception.Paths[Sortie de source OLE DB]"
+          TopLeft="367.25,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,108"
+              Start="0,0"
+              End="0,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLE - SSAS - Performance Indices">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Exceptions\DFT - Performance VL - Exception">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="218,42"
+          Id="Package\SC - Exceptions\DFT - Performance VL - Exception\OLE - SSAS - Performance VL"
+          TopLeft="43.5,5.5" />
+        <NodeLayout
+          Size="290,42"
+          Id="Package\SC - Exceptions\DFT - Performance VL - Exception\OLEDB Command - Update STG_CubeFactVL"
+          TopLeft="9,164" />
+        <EdgeLayout
+          Id="Package\SC - Exceptions\DFT - Performance VL - Exception.Paths[Sortie de source OLE DB]"
+          TopLeft="153.25,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,116.5"
+              Start="0,0"
+              End="0,109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Exceptions\DFT - Performance VL - Exception\OLE - SSAS - Performance VL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="125,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Trier ISIN"
+          TopLeft="196.25,210.5" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Merge Join Alpha 1 3 5"
+          TopLeft="333,332" />
+        <NodeLayout
+          Size="335,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque"
+          TopLeft="260,557" />
+        <NodeLayout
+          Size="295,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque Last Friday"
+          TopLeft="458,108" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque"
+          TopLeft="137.75,107" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Trier ISIN vendredi"
+          TopLeft="521,210.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\DC - DateAdd"
+          TopLeft="355,448" />
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de tri1]"
+          TopLeft="605.5,252.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-149.166666666667,79.5"
+              Start="0,0"
+              End="-149.166666666667,72">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.2953340402969"
+                    Point2="0,47.2953340402969"
+                    Point3="-4,47.2953340402969" />
+                  <mssgle:LineSegment
+                    End="-145.166666666667,47.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-145.166666666667,47.2953340402969"
+                    Point2="-149.166666666667,47.2953340402969"
+                    Point3="-149.166666666667,51.2953340402969" />
+                  <mssgle:LineSegment
+                    End="-149.166666666667,72" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de tri]"
+          TopLeft="258.75,252.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="137.916666666667,79.5"
+              Start="0,0"
+              End="137.916666666667,72">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.2953340402969"
+                    Point2="0,47.2953340402969"
+                    Point3="4,47.2953340402969" />
+                  <mssgle:LineSegment
+                    End="133.916666666667,47.2953340402969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.916666666667,47.2953340402969"
+                    Point2="137.916666666667,47.2953340402969"
+                    Point3="137.916666666667,51.2953340402969" />
+                  <mssgle:LineSegment
+                    End="137.916666666667,72" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de source OLE DB1]"
+          TopLeft="258.25,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,61.5"
+              Start="0,0"
+              End="0,54">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de source OLE DB]"
+          TopLeft="605.5,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de jointure de fusion]"
+          TopLeft="426.5,374">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de colonne dérivée]"
+          TopLeft="427,490">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Récupération des Alpha et TE en date du dernier vendredi car donnée fausse sinon&#xA;"
+          ParentId="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire"
+          Size="432,NaN"
+          Id="c6e052ed-10d1-4a93-bb5e-752b4fc647d1"
+          TopLeft="522,40">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Color="#FFF1F1F1">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - SSAS - Performance Indices"
+          TopLeft="244,91" />
+        <NodeLayout
+          Size="316,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - DB_StagingAmiralSite STG_CubeFactIndices"
+          TopLeft="201,214" />
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire.Paths[Sortie de source OLE DB]"
+          TopLeft="361.25,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,81"
+              Start="0,0"
+              End="0,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - SSAS - Performance Indices">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="218,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - SSAS - Performance VL"
+          TopLeft="43.5,5.5" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - DB_StagingAmiralSite STG_CubeFactVL"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire.Paths[Sortie de source OLE DB]"
+          TopLeft="152.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - SSAS - Performance VL">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -17843,64 +19132,18 @@ ORDER BY Part[Libelle Part]</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="294,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - DB_StagingAmiralSite STG_CubeFactVL"
-          TopLeft="5.50000000000003,107.5" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - SSAS - Performance VL"
-          TopLeft="43.5,5.5" />
-        <EdgeLayout
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien.Paths[Sortie de source OLE DB]"
-          TopLeft="152.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - SSAS - Performance VL">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="316,42"
-          Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien\OLE - DB_StagingAmiralSite STG_CubeFactIndices"
-          TopLeft="201,214" />
-        <NodeLayout
           Size="239,42"
           Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien\OLE - SSAS - Performance Indices"
           TopLeft="244,91" />
+        <NodeLayout
+          Size="316,42"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien\OLE - DB_StagingAmiralSite STG_CubeFactIndices"
+          TopLeft="201,214" />
         <EdgeLayout
           Id="Package\SC - Fonds Quotidiens\DFT - Performance Indice - Quotidien.Paths[Sortie de source OLE DB]"
           TopLeft="361.25,133">
@@ -17935,66 +19178,20 @@ ORDER BY Part[Libelle Part]</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="316,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - DB_StagingAmiralSite STG_CubeFactIndices"
-          TopLeft="201,214" />
-        <NodeLayout
-          Size="239,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - SSAS - Performance Indices"
-          TopLeft="244,91" />
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire.Paths[Sortie de source OLE DB]"
-          TopLeft="361.25,133">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,81"
-              Start="0,0"
-              End="0,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance Indice - Hebdomadaire\OLE - SSAS - Performance Indices">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire">
+    design-time-name="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - SSAS - Performance VL"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - SSAS - Performance VL"
           TopLeft="43.5,5.5" />
         <NodeLayout
           Size="294,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - DB_StagingAmiralSite STG_CubeFactVL"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - DB_StagingAmiralSite STG_CubeFactVL"
           TopLeft="5.50000000000003,107.5" />
         <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire.Paths[Sortie de source OLE DB]"
+          Id="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien.Paths[Sortie de source OLE DB]"
           TopLeft="152.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18019,7 +19216,7 @@ ORDER BY Part[Libelle Part]</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Performance VL - Hebdomadaire\OLE - SSAS - Performance VL">
+    design-time-name="Package\SC - Fonds Quotidiens\DFT - Performance VL - Quotidien\OLE - SSAS - Performance VL">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -18027,319 +19224,32 @@ ORDER BY Part[Libelle Part]</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-        <NodeLayout
-          Size="125,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Trier ISIN"
-          TopLeft="196.25,210.5" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Merge Join Alpha 1 3 5"
-          TopLeft="333,332" />
-        <NodeLayout
-          Size="335,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - DB_StagingAmiralSite STG_IndicateursDeRisque"
-          TopLeft="260,557" />
-        <NodeLayout
-          Size="295,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque Last Friday"
-          TopLeft="458,108" />
-        <NodeLayout
-          Size="240,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque"
-          TopLeft="137.75,107" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\Trier ISIN vendredi"
-          TopLeft="521,210.5" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\DC - DateAdd"
-          TopLeft="355,448" />
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de tri1]"
-          TopLeft="605.5,252.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-149.166666666667,79.5"
-              Start="0,0"
-              End="-149.166666666667,72">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.2953340402969"
-                    Point2="0,47.2953340402969"
-                    Point3="-4,47.2953340402969" />
-                  <mssgle:LineSegment
-                    End="-145.166666666667,47.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-145.166666666667,47.2953340402969"
-                    Point2="-149.166666666667,47.2953340402969"
-                    Point3="-149.166666666667,51.2953340402969" />
-                  <mssgle:LineSegment
-                    End="-149.166666666667,72" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de tri]"
-          TopLeft="258.75,252.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="137.916666666667,79.5"
-              Start="0,0"
-              End="137.916666666667,72">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.2953340402969"
-                    Point2="0,47.2953340402969"
-                    Point3="4,47.2953340402969" />
-                  <mssgle:LineSegment
-                    End="133.916666666667,47.2953340402969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="133.916666666667,47.2953340402969"
-                    Point2="137.916666666667,47.2953340402969"
-                    Point3="137.916666666667,51.2953340402969" />
-                  <mssgle:LineSegment
-                    End="137.916666666667,72" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de source OLE DB1]"
-          TopLeft="258.25,149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,61.5"
-              Start="0,0"
-              End="0,54">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de source OLE DB]"
-          TopLeft="605.5,150">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60.5"
-              Start="0,0"
-              End="0,53">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de jointure de fusion]"
-          TopLeft="426.5,374">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,74"
-              Start="0,0"
-              End="0,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire.Paths[Sortie de colonne dérivée]"
-          TopLeft="427,490">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="Récupération des Alpha et TE en date du dernier vendredi car donnée fausse sinon&#xA;"
-          ParentId="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire"
-          Size="432,51"
-          Id="c6e052ed-10d1-4a93-bb5e-752b4fc647d1"
-          TopLeft="522,40">
-          <AnnotationLayout.FontInfo>
-            <mssge:FontInfo
-              Color="#FFF1F1F1">
-              <mssge:FontInfo.TextDecorations>
-                <av:TextDecorationCollection />
-              </mssge:FontInfo.TextDecorations>
-            </mssge:FontInfo>
-          </AnnotationLayout.FontInfo>
-        </AnnotationLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SC - Fonds Hebdo\DFT - Indicateurs de Risque - Hebdomadaire\OLE - SSAS - Indicateur de Risque">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="240,42"
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLE - SSAS - Indicateur de Risque"
-          TopLeft="75.5,5.5" />
-        <NodeLayout
-          Size="380,42"
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLEDB Command - Update STG_IndicateursDeRisque Exception"
-          TopLeft="5.50000000000003,209.5" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\DC - DateAdd"
-          TopLeft="124,107.5" />
-        <EdgeLayout
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception.Paths[Sortie de source OLE DB]"
-          TopLeft="195.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception.Paths[Sortie de colonne dérivée]"
-          TopLeft="195.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SC - Exceptions\DFT - Indicateurs de Risque - Exception\OLE - SSAS - Indicateur de Risque">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\SC - Exceptions\DFT - Performance VL - Exception">
+    design-time-name="Package\risque quoti">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="218,42"
-          Id="Package\SC - Exceptions\DFT - Performance VL - Exception\OLE - SSAS - Performance VL"
-          TopLeft="43.5,5.5" />
+          Size="150,42"
+          Id="Package\risque quoti\Source OLE DB"
+          TopLeft="625,141" />
         <NodeLayout
-          Size="290,42"
-          Id="Package\SC - Exceptions\DFT - Performance VL - Exception\OLEDB Command - Update STG_CubeFactVL"
-          TopLeft="9,164" />
+          Size="171,42"
+          Id="Package\risque quoti\Destination OLE DB"
+          TopLeft="612,338" />
         <EdgeLayout
-          Id="Package\SC - Exceptions\DFT - Performance VL - Exception.Paths[Sortie de source OLE DB]"
-          TopLeft="153.25,47.5">
+          Id="Package\risque quoti.Paths[Sortie de source OLE DB]"
+          TopLeft="698.75,183">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,116.5"
+              EndConnector="0,155"
               Start="0,0"
-              End="0,109">
+              End="0,147.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,109" />
+                    End="0,147.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18352,56 +19262,23 @@ ORDER BY Part[Libelle Part]</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\SC - Exceptions\DFT - Performance VL - Exception\OLE - SSAS - Performance VL">
+    design-time-name="Package\risque quoti\Source OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\SC - Exceptions\DFT - Performance Indice - Exception">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="239,42"
-          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLE - SSAS - Performance Indices"
-          TopLeft="244,91" />
-        <NodeLayout
-          Size="312,42"
-          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLEDB Command - Update STG_CubeFactIndices"
-          TopLeft="215,241" />
-        <EdgeLayout
-          Id="Package\SC - Exceptions\DFT - Performance Indice - Exception.Paths[Sortie de source OLE DB]"
-          TopLeft="367.25,133">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,108"
-              Start="0,0"
-              End="0,100.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,100.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\SC - Exceptions\DFT - Performance Indice - Exception\OLE - SSAS - Performance Indices">
+    design-time-name="Package\risque quoti\Destination OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

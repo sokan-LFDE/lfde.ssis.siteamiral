@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="000-Execute Packages"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{FEBD72BC-A0E8-4999-9CB5-D2B4931854B1}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{95D1419D-1EC1-4173-9BCA-6BAAF7588B99}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -193,6 +194,10 @@
           Size="187,42"
           Id="Package\PET - 060-Push MySQL"
           TopLeft="54.5000000000001,510.5" />
+        <NodeLayout
+          Size="246,42"
+          Id="Package\TSQL - Set CONF_ISIN_A_PUBLIER"
+          TopLeft="22,14" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="148,144.5">
@@ -281,10 +286,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="246,42"
-          Id="Package\TSQL - Set CONF_ISIN_A_PUBLIER"
-          TopLeft="22,14" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="146.5,56">
